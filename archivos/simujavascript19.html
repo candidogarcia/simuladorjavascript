@@ -1,0 +1,322 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function funcionuno(){
+
+document.getElementById("parrafo").innerHTML="Este es el primer texto";
+
+}
+
+
+function funciondos(){
+
+document.getElementById("parrafo").innerHTML="Este es el segundo texto";
+
+}
+
+function funciontres(){
+
+document.getElementById("parrafo").innerHTML="Este es el tercer texto";
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("texto").innerHTML = parrafo1;}
+
+
+function cambiarpagina2(){
+
+var parrafo2 = document.getElementById("codigo2").value;
+document.getElementById("boton").innerHTML = parrafo2;}
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Elijamos una funci&oacute;n</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo utilizamos el bot&oacute;n para modificar un texto situado en un p&aacute;rrafo concreto.</p>
+<p>Podemos variar el texto del bot&oacute;n, el evento, que podemos sustituir por onclick, ondblclick, onmousedown, onmouseup, 
+onmouseover, onmousemove y onmouseout, y la funci&oacute;n a la que se llama.</p><p>Al actuar sobre el bot&oacute;n llamamos a una funci&oacute;n. En el cuadro de texto podemos elegir entre las funciones funcionuno(), 
+funciondos() y funciontres().</p>
+<p>Las tres funciones modifican el texto que se sit&uacute;a en el p&aacute;rrafo identicado como "parrafo", mediante la etiqueta &lt;p id="parrafo"&gt;.</p>
+
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+function funcionuno(){<br>
+
+document.getElementById("parrafo").innerHTML="Este es el primer texto";<br>
+
+}<br><br>
+
+
+function funciondos(){<br>
+
+document.getElementById("parrafo").innerHTML="Este es el segundo texto";<br>
+
+}<br><br>
+
+function funciontres(){<br>
+
+document.getElementById("parrafo").innerHTML="Este es el tercer texto";<br>
+
+}<br><br>
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="6" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<font size="5" color="green" face="Sans-serif">
+<p>Como muestra vale un bot&oacute;n</p>
+</font>
+</textarea><br>
+&lt;/p&gt;<br>
+
+&lt;p&gt;<br>
+<textarea rows="6" cols="55" onchange="cambiarpagina2()" id ="codigo2" class="texto3" />
+<input type="button" value="Bot&oacute;n" onclick="funcionuno();">
+</textarea><br>
+&lt;/p&gt;<br>
+&lt;p id="parrafo"&gt;<br>
+Texto que cambia<br>
+&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+<p id = "texto">
+<font size="5" color="green" face="Sans-serif">
+Como muestra vale un bot&oacute;n
+</font>
+</p>
+<p id="boton">
+<input type="button" value="Bot&oacute;n" OnClick="funcionuno();">
+
+</p>
+<p id="parrafo">
+Texto que cambia
+<br> 
+</p>
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 14.- Crea un documento web con un bot&oacute;n que modifica el texto que aparece en un p&aacute;rrafo concreto.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript18.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript20.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

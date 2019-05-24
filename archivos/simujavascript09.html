@@ -1,0 +1,482 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+<style>
+.textBox{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:18px;
+   color:#08088A;
+   vertical-align:bottom;
+}
+</style>
+
+<script type="text/javascript">
+
+function cambiarcelda1(){
+var imagen = document.getElementById("celda1").value;
+
+document.getElementById("contcelda1").src=imagen;
+
+}
+
+
+function cambiarcelda7(){
+var imagen = document.getElementById("celda7").value;
+
+document.getElementById("contcelda7").src=imagen;
+
+}
+
+function cambiarcelda2(){
+var texto = document.getElementById("celda2").value;
+
+document.getElementById("contcelda2").innerHTML=texto;
+
+}
+
+function cambiarcelda3(){
+var texto = document.getElementById("celda3").value;
+
+document.getElementById("contcelda3").innerHTML=texto;
+
+}
+
+function cambiarcelda4(){
+var texto = document.getElementById("celda4").value;
+
+document.getElementById("contcelda4").innerHTML=texto;
+
+}
+
+function cambiarcelda5(){
+var texto = document.getElementById("celda5").value;
+
+document.getElementById("contcelda5").innerHTML=texto;
+
+}
+
+function cambiarcelda6(){
+var texto = document.getElementById("celda6").value;
+
+document.getElementById("contcelda6").innerHTML=texto;
+
+}
+
+function cambiarcelda8(){
+var texto = document.getElementById("celda8").value;
+
+document.getElementById("contcelda8").innerHTML=texto;
+
+}
+
+function cambiarcelda9(){
+var texto = document.getElementById("celda9").value;
+
+document.getElementById("contcelda9").innerHTML=texto;
+
+}
+
+
+function cambiaranchura(){
+
+var ancho = document.getElementById("anchotabla").value;
+document.getElementById("dataTable").width= ancho;
+
+}
+
+
+
+
+
+
+function cambiarlinea(){
+
+var linea = document.getElementById("ancholinea").value;
+document.getElementById("dataTable").border= linea;
+
+}
+
+
+function cambiarespacioceldas(){
+
+var interceldas = document.getElementById("espacioceldas").value;
+
+tabla = document.getElementById("dataTable");
+tabla.cellSpacing = interceldas;
+
+}
+
+
+
+
+
+function cambiarcolorlinea(){
+
+var coloreslinea = document.getElementById("colorlinea").value;
+document.getElementById("dataTable").style.borderColor = coloreslinea;
+
+}
+
+
+
+
+function cambiarcolortabla(){
+
+tabla = document.getElementById("dataTable");
+var colort = document.getElementById("colortabla").value;
+
+tabla.style.backgroundColor=colort;
+
+}
+
+
+function cambiarcolorcelda(){
+
+celda = document.getElementById("cols2");
+var colorc = document.getElementById("colorcelda").value;
+
+celda.style.backgroundColor=colorc;
+
+}
+
+
+
+
+
+function agruparceldas1(){
+
+
+var agrucol1 = document.getElementById("agrupar1").value;
+
+document.getElementById("cols1").colSpan = agrucol1;
+
+}
+
+function agruparceldas2(){
+
+
+var agrucol2 = document.getElementById("agrupar2").value;
+
+document.getElementById("cols2").colSpan = agrucol2;
+
+}
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Otros atributos de la etiqueta &lt;table&gt;</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En esta tabla tambi&eacute;n se han incorporado los atributos bordercolor="#dddddd" que da color a las lineas de la tabla y cellspacing="2" 
+que marca un espacio de separaci&oacute;n entre las celdas de la tabla.</p>
+<p>Estos dos atributos se han de incluir en la etiqueta &lt;table&gt;.</p>
+<p>Prueba a modificar estos dos atributos.</p> 
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+
+&lt;table width="
+<textarea rows="1" cols="4" onchange="cambiaranchura()" id ="anchotabla" class="textBox" />
+350
+</textarea>" border="
+<textarea rows="1" cols="3" onchange="cambiarlinea()" id ="ancholinea" class="textBox" />
+1
+</textarea>" bordercolor="
+<textarea rows="1" cols="10" onchange="cambiarcolorlinea()" id ="colorlinea" class="textBox" />
+#dddddd
+</textarea>" cellspacing="
+<textarea rows="1" cols="3" onchange="cambiarespacioceldas()" id ="espacioceldas" class="textBox" />
+2
+</textarea>" 
+bgcolor="
+<textarea rows="1" cols="10" onchange="cambiarcolortabla()" id ="colortabla" class="textBox" />
+#dddddd
+</textarea>"
+&gt;<br>
+&lt;tr&gt;<br>
+&lt;td
+ colspan="
+<textarea rows="1" cols="2" onchange="agruparceldas1()" id ="agrupar1" class="textBox" />
+1
+</textarea>"
+&gt;<br>
+&lt;img src="
+<textarea rows="1" cols="35" onchange="cambiarcelda1()" id ="celda1" class="textBox" />
+pezglobo.jpg
+</textarea>"
+
+&gt;<br>
+&lt;/td&gt;<br>
+&lt;td
+ bgcolor="
+<textarea rows="1" cols="10" onchange="cambiarcolorcelda()" id ="colorcelda" class="textBox" />
+#11ddde
+</textarea>"
+ colspan="
+<textarea rows="1" cols="2" onchange="agruparceldas2()" id ="agrupar2" class="textBox" />
+1
+</textarea>"
+&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda2()" id ="celda2" class="textBox" />
+Celda
+</textarea><br>
+&lt;/td&gt;<br>
+
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda4()" id ="celda4" class="textBox" />
+Celda
+</textarea><br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda5()" id ="celda5" class="textBox" />
+Celda
+</textarea><br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda6()" id ="celda6" class="textBox" />
+Celda
+</textarea><br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+
+&lt;td&gt;<br>
+&lt;img src="
+<textarea rows="1" cols="35" onchange="cambiarcelda7()" id ="celda7" class="textBox" />
+pezpayaso.jpg
+</textarea>
+"&gt;<br>
+&lt;/td&gt;<br>
+
+&lt;td&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda8()" id ="celda8" class="textBox" />
+Celda
+</textarea><br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda9()" id ="celda9" class="textBox" />
+Celda
+</textarea><br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+
+
+
+&lt;/table&gt;<br>
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;
+
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<TABLE id="dataTable" bgcolor="#dddddd" width="350px" border="1" cellSpacing="6">
+<TR>
+<td id="cols1"><img src="pezglobo.jpg"  id="contcelda1"></td>
+<td id="cols2" bgcolor="#11ddde"><p id="contcelda2">Celda</p></td>
+
+</TR>
+<TR>
+<td><p id="contcelda4">Celda</p></td>
+<td><p id="contcelda5">Celda</p></td>
+<td><p id="contcelda6">Celda</p></td>
+</TR>
+<TR>
+<td><img src="pezpayaso.jpg" id="contcelda7"></td>
+<td><p id="contcelda8">Celda</p></td>
+<td><p id="contcelda9">Celda</p></td>
+</TR>
+       
+        
+
+     </TABLE>
+
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 5.- Has de hacer una p&aacute;gina web en la que aparezca una tabla lo m&aacute;s variada posible, sobre un tema que a ti te interese.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript08.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript10.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

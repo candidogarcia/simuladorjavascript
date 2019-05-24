@@ -1,0 +1,391 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+var valor=100;
+
+var operacion = 1;
+
+
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+function funcionoperar(numero){
+
+if (operacion==1){
+
+valor = valor + numero;
+
+
+}
+
+
+if (operacion==0){
+
+valor = valor - numero;
+
+}
+
+document.getElementById("marcador").innerHTML=valor;
+
+}
+
+
+function funcionsuma(){
+
+operacion = 1;
+
+}
+
+
+function funcionresta(){
+
+operacion = 0;
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Llamando a una funci&oacute;n con un valor determinado</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo tenemos un teclado con cuatro cifras y las operaciones suma y resta. Con las teclas de las cifras podemos ir aumentando 
+o disminuyendo el valor de la variable valor, dependiendo de que hayamos tecleado antes la tecla mas o menos.</p>
+<p>Si nos fijamos, veremos que se usan tres funciones funcionoperar(numero), funcionsuma() y funcionresta(). Cuando desde el teclado 
+tecleamos sobre una cifra llamamos a la funci&oacute;n funcionoperar(numero) y adem&aacute;s le enviamos el valor de la variable numero. De hecho 
+puedes modificar estos valores en el c&oacute;digo de la izquierda y ver como se comporta.</p>
+<p>Dentro de la funci&oacute;n funcionoperar(numero) hay dos funciones m&aacute;s, de las llamadas condicionales. Las &oacute;rdenes que van dentro de estas 
+funciones se ejecutan si se cumple la condici&oacute;n que se encuentra dentro del par&eacute;ntesis. En la funci&oacute;n if (operacion==0) se ha de cumplir 
+que el valor de la variable operacion sea igual a cero, para que se ejecute la linea de c&oacute;digo valor = valor - numero;.</p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+var valor = 100;<br><br>
+
+var operacion = 1;<br><br>
+
+
+
+function funcionoperar(numero){<br><br>
+
+if (operacion==1){<br>
+
+valor = valor + numero;<br>
+
+
+}<br><br>
+
+
+if (operacion==0){<br>
+
+valor = valor - numero;<br>
+
+}<br><br>
+
+document.getElementById("marcador").innerHTML=valor;<br><br>
+
+
+}<br><br>
+
+
+
+function funcionsuma(){<br>
+
+operacion = 1;<br>
+
+}<br><br>
+
+
+function funcionresta(){<br>
+
+operacion = 0;<br>
+
+}<br><br>
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="32" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Aumentar y disminuir</p>
+</font>
+</p>
+<p>
+<input type=image src="numero1.jpg" width="50" height="50" onclick="funcionoperar(1);" border ="2">
+
+<input type=image src="numero2.jpg" width="50" height="50" onclick="funcionoperar(2);" border ="2">
+
+<input type=image src="numero3.png" width="50" height="50" onclick="funcionoperar(3);" border ="2">
+<br>
+
+<input type=image src="numero4.png" width="50" height="50" onclick="funcionoperar(4);" border ="2">
+
+<input type=image src="suma.png" width="50" height="50" onclick="funcionsuma();" border ="2">
+
+<input type=image src="resta.jpg" width="50" height="50" onclick="funcionresta();" border ="2">
+<br>
+
+<p id = "marcador">
+100
+</p>
+
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 22.- Dise&ntilde;a un documento web con un teclado que pueda manejar n&uacute;meros y mostrarlos.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript26.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript28.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

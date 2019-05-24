@@ -1,0 +1,408 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+dibujarpunto();
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+function dibujarpunto(){
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+eval(textarea.value);
+
+}
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Dibujar en un canvas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Un canvas es un espacio en donde dibujar. El canvas propiamente dicho es un elemento de html, pero lo que dibujemos lo hemos de escribir 
+en JavaScript. </p>
+<p>En este ejemplo dibujamos cuadrados, l&iacute;neas rectas y c&iacute;rculos. Para dibujar un rect&aacute;ngulo (O un cuadrado) lo hacemos con la orden 
+ctx.fillRect (0, 0, 500, 500);, los dos primeros valores num&eacute;ricos son las coordenadas de la esquina superior izquierda y los dos &uacute;ltimos 
+valores las medidas de sus lados. Para dibujar una l&iacute;nea recta utilizamos la orden ctx.lineTo(300,250);, que nos indica hasta donde ha de 
+llegar la l&iacute;nea recta desde el punto en donde se hab&iacute;a quedado anteriormente. Para dibujar un c&iacute;rculo hemos de usar la orden 
+ctx.arc(75,75,50,0,Math.PI*2,true);, en la que los dos primeros valores num&eacute;ricos se corresponden con las coordenadas del centro del 
+c&iacute;rculo, el tercer valor indica el radio. La expresi&oacute;n Math.PI*2 indica que se ha de dibujar un arco que abarque un &aacute;ngulo de esta cantidad 
+de radianes, si a continuaci&oacute;n, indicamos true, el arco se describir&aacute; en sentido contrario de las agujas del reloj, si por el contrario 
+indicamos false, se dibujar&aacute; en el sentido de las agujas del reloj. Cuando deseamos trasladarnos a un punto sin dibujar nada, utilizamos 
+la orden ctx.moveTo(270,250);.</p>
+<p>Haz todas las modificaciones que creas oportunas en el dibujo, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+
+
+
+
+
+function dibujarcanvas(){<br><br>
+
+var canvas = document.getElementById("canvas");<br>
+var ctx = canvas.getContext("2d");<br>
+
+
+
+<textarea id="code" rows="50" cols="55" class="texto3" onchange = "dibujarpunto()">
+ctx.beginPath();
+//este es el cuadrado gris de fondo
+ctx.fillStyle = '#cccccc';
+ctx.fillRect (0, 0, 500, 500);
+//ahora dibujamos un cuadrado relleno de color
+ctx.fillStyle = '#ffffaa';
+ctx.fillRect (150, 150, 100, 100);
+//este es un cuadrado en blanco "clear"
+ctx.clearRect(200,200,50,50);
+//este es un cuadrado con borde de color azul claro
+ctx.strokeStyle = '#aaffff';
+ctx.lineWidth=5;
+ctx.strokeRect(150,150,50,50);
+//ahora dibujamos lineas rectas con relleno blanco
+ctx.strokeStyle = '#000000';
+ctx.lineWidth=10;
+ctx.fillStyle = '#ffffff';
+ctx.moveTo(270,250);
+ctx.lineTo(270,220);
+ctx.lineTo(300,220);
+ctx.lineTo(300,250);
+ctx.lineTo(330,250);
+ctx.lineTo(330,220);
+ctx.lineTo(360,220);
+ctx.lineTo(360,250);
+ctx.lineTo(390,250);
+ctx.fill();
+ctx.stroke();
+//ahora unas cuantas curvas para hacer una cara
+//empezamos por crear un gradiente de color
+var gradient=ctx.createLinearGradient(0,0,170,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+ctx.strokeStyle = gradient;
+ctx.lineWidth=1;
+ctx.moveTo(125,75);
+ctx.arc(75,75,50,0,Math.PI*2,true); // C&iacute;rculo externo
+    ctx.moveTo(110,75);
+    ctx.arc(75,75,35,0,Math.PI,false);  // Boca (Sentido horario)
+    ctx.moveTo(65,65);
+    ctx.arc(60,65,5,0,Math.PI*2,true);  // Ojo izquierdo
+    ctx.moveTo(95,65);
+    ctx.arc(90,65,5,0,Math.PI*2,true);  // Ojo derecho
+ctx.stroke();
+</textarea><br>
+}<br><br>
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body onload ="dibujarcanvas()"&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Dibujando en un canvas</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo del canvas y ver como queda el dibujo al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+&lt;/p&gt;<br>
+&lt;canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+        
+<canvas id="canvas" width="500" height="500" class="playable-canvas" style="border:1px solid #000000;">
+</canvas>
+
+<script type="text/javascript">
+
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
+var code = textarea.value;
+
+
+function drawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawCanvas();
+});
+
+edit.addEventListener("click", function() {
+  textarea.focus();
+})
+
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
+</script>
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 32.- Dise&ntilde;a un documento web con un dibujo creado sobre un canvas. Puedes copiar todo el c&oacute;digo y probarlo en 
+<a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript36.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript38.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

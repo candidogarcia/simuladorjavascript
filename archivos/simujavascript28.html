@@ -1,0 +1,427 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+var cadena="";
+
+var operacion = 1;
+
+var letra = "";
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+function funcionescribir(indice){
+
+if(indice==1){
+
+letra = "a";
+
+}
+
+if(indice==2){
+
+letra = "b";
+
+}
+
+if(indice==3){
+
+letra = "c";
+
+}
+
+if(indice==4){
+
+letra = "d";
+
+}
+
+if(indice==5){
+
+letra = "e";
+
+}
+
+cadena = cadena + letra;
+
+
+document.getElementById("marcador").innerHTML=cadena;
+
+}
+
+
+function funcionborrar(){
+
+var longitud = cadena.length;
+cadena = cadena.substring(0, longitud-1);
+
+document.getElementById("marcador").innerHTML=cadena;
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Trabajando con cadenas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo vamos a trabajar con cadenas. Una cadena es una variable alfanum&eacute;rica, que puede contener letras y n&uacute;meros. Se puede 
+modificar una cadena eliminando algunos de sus caracteres.</p>
+<p>Si nos fijamos, veremos que se usan dos funciones funcionescribir(indice) y funcionborrar(). Cuando desde el teclado 
+tecleamos sobre una letra llamamos a la funci&oacute;n funcionescribir(indice) y adem&aacute;s le enviamos el valor de la variable indice. Del valor de 
+la variable indice depende la letra que se a&ntilde;ade a la cadena cadena. </p>
+<p>Dentro de la funci&oacute;n funcionescribir(indice) hay cinco funciones m&aacute;s, de las llamadas condicionales. Las &oacute;rdenes que van dentro de estas 
+funciones se ejecutan si se cumple la condici&oacute;n que se encuentra dentro del par&eacute;ntesis. En la funci&oacute;n if (indice==1) se ha de cumplir 
+que el valor de la variable indice sea igual a uno, para que se ejecute la linea de c&oacute;digo letra = "a";.</p>
+<p>La funci&oacute;n funcionborrar() calcula primero la cantidad de caracteres de la cadena, mediante el c&oacute;digo var longitud = cadena.length;, a 
+continuaci&oacute;n se elimina el &uacute;ltimo car&aacute;cter, mediante el c&oacute;digo cadena = cadena.substring(0, longitud-1);.</p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+var cadena="";<br><br>
+
+var letra = "";<br><br>
+
+
+
+
+
+
+function funcionescribir(indice){<br><br>
+
+if(indice==1){<br>
+
+letra = "a";<br>
+
+}<br><br>
+
+if(indice==2){<br>
+
+letra = "b";<br>
+
+}<br><br>
+
+if(indice==3){<br>
+
+letra = "c";<br>
+
+}<br><br>
+
+if(indice==4){<br>
+
+letra = "d";<br>
+
+}<br><br>
+
+if(indice==5){<br>
+
+letra = "e";<br>
+
+}<br><br>
+
+cadena = cadena + letra;<br>
+
+
+document.getElementById("marcador").innerHTML=cadena;<br>
+
+}<br><br>
+
+
+function funcionborrar(){<br>
+
+var longitud = cadena.length;<br>
+cadena = cadena.substring(0, longitud-1);<br>
+
+document.getElementById("marcador").innerHTML=cadena;<br>
+
+}<br><br>
+
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="32" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Esto son cadenas</p>
+</font>
+</p>
+<p>
+<input type=image src="teclaa.jpg" width="50" height="50" onclick="funcionescribir(1);" border ="2">
+
+<input type=image src="teclab.png" width="50" height="50" onclick="funcionescribir(2);" border ="2">
+
+<input type=image src="teclac.jpg" width="50" height="50" onclick="funcionescribir(3);" border ="2">
+<br>
+
+<input type=image src="teclad.jpg" width="50" height="50" onclick="funcionescribir(4);" border ="2">
+
+<input type=image src="teclae.png" width="50" height="50" onclick="funcionescribir(5);" border ="2">
+
+<input type=image src="resta.jpg" width="50" height="50" onclick="funcionborrar();" border ="2">
+<br>
+
+<p id = "marcador">
+
+</p>
+
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 23.- Dise&ntilde;a un documento web con un teclado que pueda escribir y borrar una palabra y mostrarla. Puedes copiar todo el c&oacute;digo 
+y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</a></p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript27.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript29.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

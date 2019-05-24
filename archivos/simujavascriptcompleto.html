@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simulador JavaScript</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5">
+<img src="logosimujava.png">
+</td>
+</tr>
+
+
+<tr>
+<td BGCOLOR="#0080FF">
+<blockquote>
+<font size="2" face="arial" color="white">
+<b>Introduce el c&oacute;digo en la ventana de la izquierda.</b>
+</a>
+</td>
+</tr>
+</table>
+
+
+<div id="bin" class="stretch" style="opacity: 0; filter:alpha(opacity=0);">
+  <div id="source" class="binview stretch">
+        <div class="dropdown" id="htmlprocessors">
+          <div class="dropdownmenu processorSelector" data-type="html">
+      <div class="editbox">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+<div id="bin" style="opacity: 0; filter:alpha(opacity=0);">
+
+  <div id="source" class="binview stretch">
+  </div>
+  <div id="panelswaiting">
+    <div class="code stretch html panel">
+      <div class="editbox">
+        <textarea spellcheck="false" autocapitalize="off" autocorrect="off" id="html"></textarea>
+      </div>
+    </div>
+    
+
+
+	<div class="code stretch javascript panel">
+
+      <div class="editbox">
+        <textarea spellcheck="false" autocapitalize="off" autocorrect="off" id="javascript"></textarea>
+      </div>
+    </div>
+    <div class="code stretch css panel">
+      
+      <div class="editbox">
+        <textarea spellcheck="false" autocapitalize="off" autocorrect="off" id="css"></textarea>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="stretch console panel">
+
+
+    </div>
+    <div id="live" class="stretch live panel">
+
+
+
+          
+
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+var contenido = "<html>"+
+"</html>";
+
+  var template = {"url":"","html":contenido,"css":".FloatingSection\n{\n    float:left;\n    padding-bottom:10px;\n    padding-right:10px;\n  \tborder:1px solid #000;\n}","javascript":""};
+  var jsbin = {"root":"","version":"debug","state":{"stream":false,"code":"welcome","token":"69631d55e8cbecb8476c39b57c0e1774","revision":"48318"},"settings":{"panels":[]}}; tips  = // feel free to add tips to this file to help other users - just append to the end
+[ ];
+</script>
+
+<script src="jquery.js"></script>
+<script src="codemirror.js"></script>
+<script src="xml.js"></script>
+<script src="css.js"></script>
+<script src="javascript.js"></script>
+<script src="htmlmixed.js"></script>
+<script src="jsbin.js"></script>
+<script src="splitter.js"></script>
+<script src="analytics.js"></script>
+<script src="render.js"></script>
+<script src="live.js"></script>
+<script src="keycontrol.js"></script>
+<script src="console.js"></script>
+<script src="panel.js"></script>
+<script src="editors.js"></script>
+
+
+</body>
+</html>

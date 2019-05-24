@@ -1,0 +1,397 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript">
+
+var numeroprimero = "";
+
+var numerosegundo = "";
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+function introducirnumero(ordennumero){
+
+if(ordennumero==1){
+var numeroprimero = document.getElementById("primernumero").value;
+document.getElementById("primernumero").innerHTML = numeroprimero;
+}
+
+if(ordennumero==2){
+var numerosegundo = document.getElementById("segundonumero").value;
+document.getElementById("segundonumero").innerHTML = numerosegundo;
+}
+
+}
+
+function operar(indice){
+
+var numeroprimero = document.getElementById("primernumero").value;
+var numerosegundo = document.getElementById("segundonumero").value;
+
+var numerouno = parseInt(numeroprimero);
+var numerodos = parseInt(numerosegundo);
+
+if(indice==1){
+var resultado = numerouno + numerodos;
+}
+
+if(indice==2){
+resultado = numerouno - numerodos;
+}
+
+if(indice==3){
+resultado = numerouno * numerodos;
+}
+
+if(indice==4){
+resultado = numerouno / numerodos;
+}
+
+document.getElementById("resultados").innerHTML = resultado;
+
+}
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Una calculadora con cuadros de texto</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo tenemos otra calculadora con dos cuadros de texto y un teclado con las cuatro operaciones b&aacute;sicas.</p>
+<p>Un cuadro de texto es un espacio en donde podemos escribir para introducir informaci&oacute;n en una variable, aunque tambi&eacute;n puede ser un espacio en donde se 
+muestre el resultado. Cuando escribimos o borramos algo en uno de estos cuadros de texto del ejemplo, se llama a la funci&oacute;n introducirnumero(ordennumero), que guarda 
+el valor del cuadro de texto en la variable numeroprimero o numerosegundo.</p>
+<p>Cuando se hace clic sobre una tecla de operaci&oacute;n se llama a la funci&oacute;n operar(indice) en donde, mediante cuatro funciones condicionales, se obtiene el 
+valor de la variable resultado. </p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo. </p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+var numeroprimero = "";<br><br>
+
+var numerosegundo = "";<br><br>
+
+
+function introducirnumero(ordennumero){<br><br>
+
+if(ordennumero==1){<br>
+var numeroprimero = document.getElementById("primernumero").value;<br>
+document.getElementById("primernumero").innerHTML = numeroprimero;<br>
+}<br><br>
+
+if(ordennumero==2){<br>
+var numerosegundo = document.getElementById("segundonumero").value;<br>
+document.getElementById("segundonumero").innerHTML = numerosegundo;<br>
+}<br><br>
+
+}<br><br>
+
+function operar(indice){<br><br>
+
+var numeroprimero = document.getElementById("primernumero").value;<br>
+var numerosegundo = document.getElementById("segundonumero").value;<br><br>
+
+var numerouno = parseInt(numeroprimero);<br>
+var numerodos = parseInt(numerosegundo);<br><br>
+
+if(indice==1){<br>
+var resultado = numerouno + numerodos;<br>
+}<br><br>
+
+if(indice==2){<br>
+resultado = numerouno - numerodos;<br>
+}<br><br>
+
+if(indice==3){<br>
+resultado = numerouno * numerodos;<br>
+}<br><br>
+
+if(indice==4){<br>
+resultado = numerouno / numerodos;<br>
+}<br><br>
+
+document.getElementById("resultados").innerHTML = resultado;<br><br>
+
+}<br><br>
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="35" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Calculando un poco</p>
+</font>
+</p>
+Primero introduce un n&uacute;mero en el cuadro de texto, despu&eacute;s haz lo mismo en el segundo y, para acabar, haz clic sobre el signo de operaci&oacute;n.
+<p>
+&lt;textarea rows="1" cols="20" onchange="introducirnumero(1)" id ="primernumero" class="texto3" /&gt;&lt;/textarea&gt;
+</p>
+<p>
+&lt;textarea rows="1" cols="20" onchange="introducirnumero(2)" id ="segundonumero" class="texto3" /&gt;&lt;/textarea&gt;
+</p>
+<input type=image src="suma.png" width="50" height="50" onclick="operar(1);" border ="2">
+<input type=image src="resta.jpg" width="50" height="50" onclick="operar(2);" border ="2">
+<br>
+<input type=image src="multiplicar.png" width="50" height="50" onclick="operar(3);" border ="2">
+<input type=image src="dividir.png" width="50" height="50" onclick="operar(4);" border ="2">
+<p>
+Resultado
+</p>
+<p id ="resultados">
+0
+</p>
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 30.- Dise&ntilde;a un documento web con una calculadora similar a esta. Intenta a&ntilde;adir alguna operaci&oacute;n m&aacute;s. Puedes copiar todo el c&oacute;digo y probarlo en 
+<a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript34.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript36.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

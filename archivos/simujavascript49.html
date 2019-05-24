@@ -1,0 +1,437 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+canvas {
+border : 1px gray solid; 
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onkeydown="whichButton(event)" onload="lienzo()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Eventos de teclado</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo dentro del canvas se mueve una imagen. Para conseguirlo se utiliza el evento de teclado "onkeydown". 
+Este evento se inicia en la etiqueta &lt;body&gt, cuando se presiona una tecla. </p>
+
+<p>El evento llama a la funci&oacute;n "whichButton(event)", a la que env&iacute;a el valor "event". Seg&uacute;n sea este valor, es decir, seg&uacute;n 
+cual sea la tecla presionada entrar&aacute; en uno de los cuatro condicionales. Con esto se consigue modificar las coordenadas "x" e "y" de 
+la imagen que se muestra en el canvas.</p>
+
+<p>La imagen se mueve con las cuatro teclas de direcci&oacute;n (Las cuatro flechas del teclado).</p>
+
+<p>Haz todas las modificaciones que creas oportunas en la animaci&oacute;n, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;/head&gt;<br>
+&lt;body onkeydown="whichButton(event)" onload="lienzo()"&gt;<br>
+
+<font size="4" face="arial" color="#08088A">
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Eventos de teclado</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo y ver como queda al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+
+&lt;canvas id="micanvas" width="500" height="500" style="border:1px solid #000000;background-color:#87CEEB;"&gt<br>
+&lt;/canvas&gt;<br>
+
+
+&lt;/p&gt;<br>
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+var x=0, y=0;//coordenadas iniciales de la imagen<br><br>
+
+
+
+
+function lienzo(){<br><br>
+
+var c=document.getElementById("micanvas");<br>
+var ctx=c.getContext("2d");<br>
+var img1 = new Image();<br>
+img1.src = 'colibri.jpg';<br>
+ctx.clearRect(0,0,500,500);//limpia todo el canvas <br>
+ctx.drawImage(img1,x,y,50,50);//dibuja la imagen<br><br>
+
+}
+
+
+
+
+//cuando presiona una tecla<br>
+function whichButton(event){<br><br>
+
+if(event.keyCode=='39'){//si la tecla presionada es direccional derecho<br><br>
+
+x=x+5;//mueve la nave 5 pixeles a la derecha<br>
+lienzo();<br><br>
+
+}<br><br>
+
+if(event.keyCode=='37'){//si la tecla presionada es direccional izquierdo<br><br>
+
+x=x-5;//mueve la nave 5 pixeles a la izquierda<br>
+lienzo();<br><br>
+
+}<br><br>
+
+if(event.keyCode=='38'){//si la tecla presionada es direccional arriba<br><br>
+
+y=y-5;//sube la nave<br>
+lienzo();<br><br>
+
+}<br><br>
+
+if(event.keyCode=='40'){// si la tecla presionada es direccional abajo<br><br>
+
+y=y+5;//baja la nave<br>
+lienzo();<br><br>
+
+}<br><br>
+
+}<br><br>
+
+
+&lt;/script&gt;<br><br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+<font size="5" color="green" face="Sans-serif">
+Eventos de teclado<br><br>
+</font>
+
+Puedes modificar el c&oacute;digo y ver como queda al hacer clic fuera del cuadro de texto.
+</p>
+
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;background-color:#87CEEB;">
+
+
+</canvas> 
+
+
+<p id="prueba"></p>
+
+<script>
+
+
+
+var x=0, y=0;//coordenadas iniciales de la imagen
+
+
+
+
+function lienzo(){
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img1 = new Image();
+img1.src = 'colibri.jpg';
+ctx.clearRect(0,0,500,500);//limpia todo el canvas 
+ctx.drawImage(img1,x,y,50,50);//dibuja la imagen
+
+}
+
+
+
+
+//cuando presiona una tecla
+function whichButton(event){
+
+if(event.keyCode=='39'){//si la tecla presionada es direccional derecho
+
+x=x+5;//mueve la nave 5 pixeles a la derecha
+lienzo();
+
+}
+
+if(event.keyCode=='37'){//si la tecla presionada es direccional izquierdo
+
+x=x-5;//mueve la nave 5 pixeles a la izquierda
+lienzo();
+
+}
+
+if(event.keyCode=='38'){//si la tecla presionada es direccional arriba
+
+y=y-5;//sube la nave
+lienzo();
+
+}
+
+if(event.keyCode=='40'){// si la tecla presionada es direccional abajo
+
+y=y+5;//baja la nave
+lienzo();
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+	
+
+	</script>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 44.- Dise&ntilde;a un documento web con una animaci&oacute;n que tenga una imagen que se desplace al presionar las teclas de direcci&oacute;n, creada sobre un canvas. Puedes copiar todo 
+el c&oacute;digo y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina</a>. </p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript48.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript50.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

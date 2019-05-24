@@ -1,0 +1,423 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+
+var horizontal = 1;
+
+var vertical = 1;
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+function funcionmover(desplazamiento){
+
+if((desplazamiento==1)&&(vertical==2)){
+vertical = 1;
+}
+
+if((desplazamiento==4)&&(vertical==1)){
+vertical = 2;
+}
+
+if((desplazamiento==2)&&(horizontal==2)){
+horizontal = 1;
+}
+
+if((desplazamiento==3)&&(horizontal==1)){
+horizontal = 2;
+}
+
+borrar();
+
+}
+
+function borrar(){
+document.getElementById("puntouno").src="fondoazul.jpg";
+document.getElementById("puntodos").src="fondoazul.jpg";
+document.getElementById("puntotres").src="fondoazul.jpg";
+document.getElementById("puntocuatro").src="fondoazul.jpg";
+
+dibujarpunto();
+
+}
+
+function dibujarpunto(){
+
+if((horizontal==1)&&(vertical==1)){
+document.getElementById("puntouno").src="puntorojo.jpg";
+}
+
+if((horizontal==2)&&(vertical==1)){
+document.getElementById("puntodos").src="puntorojo.jpg";
+}
+
+if((horizontal==1)&&(vertical==2)){
+document.getElementById("puntotres").src="puntorojo.jpg";
+}
+
+if((horizontal==2)&&(vertical==2)){
+document.getElementById("puntocuatro").src="puntorojo.jpg";
+}
+
+}
+
+</script>
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Mover el punto tambi&eacute;n arriba y abajo</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo hemos de conseguir mover el punto rojo en las cuatro direcciones, en una cuadr&iacute;cula de 2x2.</p>
+<p>Para determinar la posici&oacute;n del punto rojo se utilizan las variables horizontal y vertical. Asignando valores a horizontal y vertical se puede situar la 
+posici&oacute;n en cada uno de los caudrados de la cuadr&iacute;cula.</p>
+<p>Las cuatro flechas llaman a la funci&oacute;n funcionmover(desplazamiento) que modifica los valores de las variables horizontal y vertical. Una vez hecho esto 
+llama a la funci&oacute;n borrar() y coloca la imagen fondoazul.jpg en todas las casillas. Una vez hecho esto llama a la funci&oacute;n dibujarpunto() que situa la imagen 
+puntorojo.jpg en donde corresponde.</p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo. A continuaci&oacute;n intenta hacer una p&aacute;gina similar sobre una cuadr&iacute;cula 
+de 3x3.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+var horizontal = 1;<br><br>
+
+
+var vertical = 1;<br><br>
+
+
+function funcionmover(desplazamiento){<br><br>
+
+if((desplazamiento==1)&&(vertical==2)){<br>
+vertical = 1;<br>
+}<br><br>
+
+if((desplazamiento==4)&&(vertical==1)){<br>
+vertical = 2;<br>
+}<br><br>
+
+if((desplazamiento==2)&&(horizontal==2)){<br>
+horizontal = 1;<br>
+}<br><br>
+
+if((desplazamiento==3)&&(horizontal==1)){<br>
+horizontal = 2;<br>
+}<br><br>
+
+borrar();<br><br>
+
+}<br><br>
+
+function borrar(){<br>
+document.getElementById("puntouno").src="fondoazul.jpg";<br>
+document.getElementById("puntodos").src="fondoazul.jpg";<br>
+document.getElementById("puntotres").src="fondoazul.jpg";<br>
+document.getElementById("puntocuatro").src="fondoazul.jpg";<br><br>
+
+dibujarpunto();<br><br>
+
+}<br><br>
+
+function dibujarpunto(){<br><br>
+
+if((horizontal==1)&&(vertical==1)){<br>
+document.getElementById("puntouno").src="puntorojo.jpg";<br>
+}<br><br>
+
+if((horizontal==2)&&(vertical==1)){<br>
+document.getElementById("puntodos").src="puntorojo.jpg";<br>
+}<br><br>
+
+if((horizontal==1)&&(vertical==2)){<br>
+document.getElementById("puntotres").src="puntorojo.jpg";<br>
+}<br><br>
+
+if((horizontal==2)&&(vertical==2)){<br>
+document.getElementById("puntocuatro").src="puntorojo.jpg";<br>
+}<br><br>
+
+}<br>
+
+
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="40" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Moviendo un punto</p>
+</font>
+</p>
+Con estas cuatro flechas puedes llevar el punto rojo hacia la izquierda o la derecha, hacia arriba o abajo.
+<p>
+<img src="fondoazul.jpg" width="50" height="50" border ="2"> 
+<input type=image src="flecha_arriba.png" width="50" height="50" onclick="funcionmover(1);" border ="2">
+<img src="fondoazul.jpg" width="50" height="50" border ="2"> 
+<br>
+<input type=image src="flecha_izqda.png" width="50" height="50" onclick="funcionmover(2);" border ="2">
+<img src="fondoazul.jpg" width="50" height="50" border ="2"> 
+<input type=image src="flecha_dcha.png" width="50" height="50" onclick="funcionmover(3);" border ="2">
+<br>
+<img src="fondoazul.jpg" width="50" height="50" border ="2"> 
+<input type=image src="flecha_abajo.png" width="50" height="50" onclick="funcionmover(4);" border ="2">
+<img src="fondoazul.jpg" width="50" height="50" border ="2"> 
+</p>
+<p>
+<img src="puntorojo.jpg" id = "puntouno" width="50" height="50" border ="2"> 
+
+<img src="fondoazul.jpg" id = "puntodos" width="50" height="50" border ="2">
+<br>
+<img src="fondoazul.jpg" id = "puntotres" width="50" height="50" border ="2"> 
+
+<img src="fondoazul.jpg" id = "puntocuatro" width="50" height="50" border ="2">
+</p>
+
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 28.- Dise&ntilde;a un documento web con un teclado con cuatro teclas, que te permita mover el punto rojo hacia la derecha, izquierda, arriba y abajo. Puedes 
+copiar todo el c&oacute;digo y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript32.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript34.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

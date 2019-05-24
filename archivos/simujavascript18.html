@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function funcionprincipal(){
+
+ alert("Bienvenido! acabas de entrar en el mundo de JavaScript");}
+
+
+
+
+function cambiarpagina(){
+
+var parrafo = document.getElementById("codigo").value;
+document.getElementById("texto").innerHTML = parrafo;
+}
+
+
+function cambiarpagina1(){
+
+var parrafo = document.getElementById("codigo1").value;
+document.getElementById("texto1").innerHTML = parrafo;
+}
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Vamos a crear botones</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo hemos creado un elemento que nos permite actuar con &eacute;l, mediante el rat&oacute;n. Se trata de un elemento utilizado en los 
+formularios html, del tipo button.</p>
+<p>En el c&oacute;digo de este elemento se incluye el texto que aparece en el bot&oacute;n (value="Bot&oacute;n") el tipo de evento que act&uacute;a sobre &eacute;l 
+(OnClick) y la funci&oacute;n a la que llama este evento.</p>
+<p>En este ejemplo podemos variar el texto del bot&oacute;n y el evento, que podemos sustituir por onclick, ondblclick, onmousedown, onmouseup, 
+onmouseover, onmousemove y onmouseout.</p>
+
+<p>La funci&oacute;n funcionprincipal() es quien hace que se abra esa nueva ventana.</p> 
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br>
+
+
+function funcionprincipal(){<br>
+
+ alert("&iexcl;Bienvenido! acabas de entrar en el mundo de JavaScript");<br>
+}<br>
+
+
+
+&lt;/script&gt;<br>
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+<textarea rows="6" cols="55" onchange="cambiarpagina()" id ="codigo" class="texto3" />
+<font size="5" color="green" face="Sans-serif">
+<p>Como muestra vale un bot&oacute;n</p>
+</font></textarea><br>
+&lt;/p&gt;<br>
+&lt;p&gt;<br>
+<textarea rows="3" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<input type="button" value="Bot&oacute;n" onclick="funcionprincipal();"><br></textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<p id = "texto" >
+<font size="5" color="green" face="Sans-serif">
+Como muestra vale un bot&oacute;n
+</font>
+</p>
+<p  id = "texto1" ><input type="button" value="Bot&oacute;n" OnClick="funcionprincipal();"><br>
+</p>
+
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 13.- Crea un documento web con un bot&oacute;n que abre una ventana emergente.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript17.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript19.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

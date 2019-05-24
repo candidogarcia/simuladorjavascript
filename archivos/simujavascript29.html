@@ -1,0 +1,361 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+function funciongatos(cantidad){
+
+if(cantidad==1){
+
+document.getElementById("gato").src="ungato.jpg";
+
+}
+
+if(cantidad==2){
+
+document.getElementById("gato").src="dosgatos.jpg";
+}
+
+if(cantidad==3){
+
+
+document.getElementById("gato").src="tresgatos.jpg";
+
+}
+
+if(cantidad==4){
+
+
+document.getElementById("gato").src="cuatrogatos.jpg";
+
+}
+
+}
+
+
+
+</script>
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Funciones condicionales</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo vamos a trabajar con funciones condicionales. Este tipo de estructura es fundamental en cualquier lenguaje de programaci&oacute;n y tambi&eacute;n en 
+JavaScript.</p>
+<p>Las funciones condicionales permiten al programa (Al c&oacute;digo) decidir que es lo que se ha de hacer, en funci&oacute;n del valor de una, o de m&aacute;s de una, variable. </p>
+<p>La estructura de una funci&oacute;n condicional es esta: if(){... }. Dentro del par&eacute;ntesis se ha de escribir la condici&oacute;n que se ha de cumplir para que se ejecute
+el c&oacute;digo que colocamos entre las llaves. En este caso la condici&oacute;n que se ha de cumplir es que el valor de la variable cantidad sea igual a uno, dos, tres o 
+cuatro. Esto se comprueba con un doble igual (cantidad==1).</p>
+<p>En este ejemplo tenemos un teclado con cuatro n&uacute;meros. Cuando hacemos clic sobre uno de ellos llamamos a la funci&oacute;n funciongatos(cantidad) y adem&aacute;s le enviamos 
+el valor de la variable cantidad. Dependiendo del valor de esta variable cantidad hacemos que aparezca una imagen diferente en la imagen con identificador gato.</p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+function funciongatos(cantidad){<br><br>
+
+if(cantidad==1){<br>
+
+document.getElementById("gato").src="ungato.jpg";<br>
+
+}<br><br>
+
+if(cantidad==2){<br>
+
+document.getElementById("gato").src="dosgatos.jpg";<br>
+
+}<br><br>
+
+if(cantidad==3){<br>
+
+document.getElementById("gato").src="tresgatos.jpg";<br>
+
+}<br><br>
+
+if(cantidad==4){<br>
+
+
+document.getElementById("gato").src="cuatrogatos.jpg";<br>
+
+}<br><br>
+
+}<br><br>
+
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="25" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Funciones condicionales</p>
+</font>
+</p>
+<p>
+<input type=image src="numero1.jpg" width="50" height="50" onclick="funciongatos(1);" border ="2">
+
+<input type=image src="numero2.jpg" width="50" height="50" onclick="funciongatos(2);" border ="2">
+</p>
+<p>
+<input type=image src="numero3.png" width="50" height="50" onclick="funciongatos(3);" border ="2">
+
+<input type=image src="numero4.png" width="50" height="50" onclick="funciongatos(4);" border ="2">
+</p>
+
+<p>
+<img src="ungato.jpg" id ="gato"> 
+</p>
+
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 24.- Dise&ntilde;a un documento web con un teclado con cuatro teclas, que te permita cambiar una imagen por otra. Puedes copiar todo el c&oacute;digo 
+y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript28.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript30.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+<style>
+.textBox{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:18px;
+   color:#08088A;
+   vertical-align:bottom;
+}
+</style>
+
+<script type="text/javascript">
+
+
+function cambiarformato1(){
+
+var parrafo = document.getElementById("formato1").value;
+
+
+if(parrafo=="normal"){
+document.getElementById("textoformato1").style.textDecoration="none";
+document.getElementById("textoformato1").innerHTML = "Texto";
+document.getElementById("textoformato1").style.font = "17px new roman";
+
+}
+
+
+if(parrafo=="negrita"){
+document.getElementById("textoformato1").style.textDecoration="none";
+document.getElementById("textoformato1").innerHTML = "Este texto est&aacute; en negrita";
+document.getElementById("textoformato1").style.font = "bold 17px new roman";
+
+}
+
+
+if(parrafo=="cursiva"){
+document.getElementById("textoformato1").style.textDecoration="none";
+document.getElementById("textoformato1").innerHTML = "Este texto est&aacute; en cursiva";
+document.getElementById("textoformato1").style.font = " italic 17px new roman";
+
+}
+
+
+if(parrafo=="subrayado"){
+
+document.getElementById("textoformato1").innerHTML = "Este texto est&aacute; subrayado";
+document.getElementById("textoformato1").style.font = "17px new roman";
+document.getElementById("textoformato1").style.textDecoration="underline";
+}
+
+if(parrafo=="negricursi"){
+document.getElementById("textoformato1").style.textDecoration="none";
+document.getElementById("textoformato1").innerHTML = "Este texto est&aacute; en negrita y cursiva";
+document.getElementById("textoformato1").style.font = "bold italic 17px new roman";
+
+}
+
+if(parrafo=="cursisubra"){
+
+document.getElementById("textoformato1").innerHTML = "Este texto est&aacute; en cursiva y subrayado";
+document.getElementById("textoformato1").style.font = "italic 17px new roman";
+document.getElementById("textoformato1").style.textDecoration="underline";
+
+}
+
+if(parrafo=="negrisubra"){
+
+document.getElementById("textoformato1").innerHTML = "Este texto est&aacute; en negrita y subrayado";
+document.getElementById("textoformato1").style.font = "bold 17px new roman";
+document.getElementById("textoformato1").style.textDecoration="underline";
+
+}
+
+
+//parrafo.style.color = "#67ffaa";
+//document.getElementById("textoformato1").style.color = "#67ffaa";
+//document.getElementById("textoformato1").style.fontSize = "xx-large";
+//document.getElementById("textoformato1").style.font = "italic bold 20px arial,serif";
+//document.getElementById("textoformato1").style.fontFamily = "Impact,Charcoal,sans-serif";
+//document.getElementById("textoformato1").style.textDecoration="underline";
+
+
+}
+
+
+function cambiartitulo(){
+var letrasize = document.getElementById("size").value;
+var letracolor = document.getElementById("color").value;
+var letraface = document.getElementById("face").value;
+var letratexto = document.getElementById("texto").value;
+document.getElementById("textotitulo").innerHTML = letratexto;
+document.getElementById("textotitulo").style.fontFamily = letraface;
+document.getElementById("textotitulo").style.color = letracolor;
+
+if(letrasize==1){
+
+document.getElementById("textotitulo").style.fontSize = "xx-small";
+
+}
+
+if(letrasize==2){
+
+document.getElementById("textotitulo").style.fontSize = "x-small";
+
+}
+
+if(letrasize==3){
+
+document.getElementById("textotitulo").style.fontSize = "small";
+
+}
+
+if(letrasize==4){
+
+document.getElementById("textotitulo").style.fontSize = "medium";
+
+}
+
+if(letrasize==5){
+
+document.getElementById("textotitulo").style.fontSize = "large";
+
+}
+
+if(letrasize==6){
+
+document.getElementById("textotitulo").style.fontSize = "x-large";
+
+}
+
+
+if(letrasize==7){
+
+document.getElementById("textotitulo").style.fontSize = "xx-large";
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Dando formato al texto</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo vamos a ver el c&oacute;digo necesario para dar formato al texto. De esta forma podemos definir la fuente, el color y el 
+tama&ntilde;o de la letra. Tambi&eacute;n se pueden determinar mediante etiquetas la negrita, cursiva o subrayado.</p>
+<p>La fuente de la letra se introduce dentro de la etiqueta &lt;font&gt;, al igual que los otros atributos color y tama&ntilde;o. Las opciones 
+para la fuente de letra son Times New Roman, Arial, Georgia, Courier, Serif, Sans-serif, Verdana, Lucida Console, Calibri, 
+Garamond, Impact y Agency FB.</p>
+<p>El atributo de color se introduce con los nombres de los colores en ingl&eacute;s o su codificaci&oacute;n RGB, (Por ejemplo  #08088A) tal como se 
+puede ver si buscamos <a href="https://es.wikipedia.org/wiki/Colores_web" target="blanck">colores web</a>.</p>
+<p>El tama&ntilde;o de la letra se determina con un valor, del 1 al 7, en el atributo size.</p>
+<p>La etiqueta utilizada para determinar la negrita es &lt;b&gt;, la utilizada para la cursiva es &lt;i&gt; y la utilizada para el 
+subrayado es &lt;u&gt;. Estas tres etiquetas tambi&eacute;n se han de cerrar cuando queramos que cesen sus efectos.</p>
+
+<p>En este ejemplo podemos modificar el formato del t&iacute;tulo y del texto.</p> 
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;font size="
+<textarea rows="1" cols="2" onchange="cambiartitulo()" id ="size" class="textBox" />
+7
+</textarea>" color="
+<textarea rows="1" cols="10" onchange="cambiartitulo()" id ="color" class="textBox" />
+blue
+</textarea>" face="
+<textarea rows="1" cols="10" onchange="cambiartitulo()" id ="face" class="textBox" />
+Sans-serif
+</textarea>"
+&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiartitulo()" id ="texto" class="textBox" />
+T&iacute;tulo
+</textarea><br>
+&lt;/font&gt;<br>
+
+
+<select id="formato1" form="formulario" onchange="cambiarformato1()" class="textBox" />
+    <option value="normal">Texto</option>
+    <option value="negrita">&lt;b&gt;Este texto est&aacute; en negrita&lt;/b&gt;</option>
+    <option value="cursiva">&lt;i&gt;Este texto est&aacute; en cursiva&lt;/i&gt;</option>
+    <option value="subrayado">&lt;u&gt;Este texto est&aacute; subrayado&lt;/u&gt;</option>
+    <option value="negricursi">&lt;b&gt;&lt;i&gt;Este texto est&aacute; en negrita y cursiva&lt;/i&gt;&lt;/b&gt;</option>
+    <option value="cursisubra">&lt;i&gt;&lt;u&gt;Este texto est&aacute; en cursiva y subrayado&lt;/u&gt;&lt;/i&gt;</option>
+    <option value="negrisubra">&lt;b&gt;&lt;u&gt;Este texto est&aacute; en negrita y subrayado&lt;/b&gt;&lt;/u&gt;</option>
+
+    </select><br>
+
+
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;
+
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+<font size="6" face="sans-serif" color="blue"
+<p id = "textotitulo">T&iacute;tulo</p>
+</font>
+<p id = "textoformato1">Texto</p>
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 7.- Crea un documento web con varios textos con formatos diferentes en cuanto a fuente, tamaño y color de letra.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript10.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript12.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

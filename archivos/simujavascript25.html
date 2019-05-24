@@ -1,0 +1,422 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var indice1="fotografia";
+
+var anchura = 10;
+
+var altura = 10;
+
+var ancho=100;
+
+var alto=100;
+
+var linea=1;
+
+var texto="gato.jpg";
+
+function funcionfoto(){
+       
+
+var imagen = document.getElementById(indice1);
+imagen.src=texto;
+imagen.width = ancho;
+imagen.height = alto;
+imagen.border = linea;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+
+
+function funcioncargar(){
+var parrafo3 = document.getElementById("codigo1").value;
+
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarindice1(){
+
+indice1 = document.getElementById("canviindi1").value;
+
+
+}
+
+
+
+function cambiartexto(){
+
+texto = document.getElementById("canvitext").value;
+
+
+}
+
+function cambiaranchura(){
+
+anchura=parseInt(document.getElementById("canvianch").value);
+funcionfoto();
+
+}
+
+function cambiaraltura(){
+
+altura=parseInt(document.getElementById("canvialt").value);
+funcionfoto();
+
+}
+
+
+function cambiarlinea(){
+
+linea=document.getElementById("canvilin").value;
+funcionfoto();
+
+}
+
+
+function funcionalto(){
+
+alto = alto + altura;
+funcionfoto();
+
+}
+
+
+function funcionancho(){
+ancho = ancho + anchura;
+funcionfoto();
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Las variables guardan informaci&oacute;n</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Las variables son elementos que permiten guardar informaci&oacute;n, tanto num&eacute;rica como alfanum&eacute;rica. Las variables se han de declarar (Crear) mediante la palabra var. </p>
+
+
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+var ancho = 100;<br><br>
+
+var alto = 100;<br><br>
+
+
+
+function funcionancho(){<br>
+ancho = ancho + 
+<textarea rows="1" cols="10" onchange="cambiaranchura()" id ="canvianch" class="texto3" />
+10</textarea>;<br>
+funcionfoto();<br>
+
+}<br><br>
+
+
+
+function funcionalto(){<br>
+
+alto = alto + 
+<textarea rows="1" cols="10" onchange="cambiaraltura()" id ="canvialt" class="texto3" />
+10</textarea>;<br>
+funcionfoto();<br>
+
+}<br><br>
+
+
+
+function funcionfoto(){<br>
+
+var imagen = document.getElementById("
+<textarea rows="1" cols="10" onchange="cambiarindice1()" id ="canviindi1" class="texto3" />
+fotografia</textarea>");<br>
+imagen.src=
+<textarea rows="1" cols="30" onchange="cambiartexto()" id ="canvitext" class="texto3" />
+gato.jpg</textarea>";<br>
+imagen.width = ancho;<br>
+imagen.height = alto;<br>
+imagen.border = 1;<br>
+
+}<br>
+
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="20" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Ya llegan las variables</p>
+</font>
+</p>
+<p>
+<a href="#" onclick="funcionancho()"/>
+<img src="botonazul.jpg" width="100" height="100" border ="8"></a>
+<a href="#" onclick="funcionalto()"/>
+<img src="botonrojo.jpg" width="100" height="100" border ="8"></a>
+</p>
+<p>
+<img src="perro.jpg" id="fotografia" width="100" height="100" border ="8">
+</p>
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#08088A">
+
+<p>Si queremos utilizar una variable en cualquier funci&oacute;n la hemos de declarar fuera de todas ellas, al principio. En este ejemplo declaramos dos variables, ancho y alto, que guardan las medidas de la imagen que modificamos</p>
+<p>En este ejemplo hemos dispuesto dos botones. Uno de ellos llama a la funci&oacute;n funcionancho() e incrementa el valor de la anchura de la imagen y el otro a la funci&oacute;n funcionalto() e incrementa el valor de la altura. Desde estas dos funciones se llama, a su vez, a la funci&oacute;n funcionfoto(), que es la que realmente modifica la imagen.</p>
+
+
+
+
+<p>&nbsp;</p>
+</font>
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 20.- Dise&ntilde;a un documento web con dos botones, creados con una imagen, que permitan modificar el tama&ntilde;o de una tercera imagen.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript24.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript26.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

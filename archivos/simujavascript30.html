@@ -1,0 +1,497 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+
+var variableuno = 0;
+
+var variabledos = 0;
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+function funcionvariableuno(indiceuno){
+
+if(indiceuno==1){
+
+variableuno = variableuno - 1;
+
+}
+
+if(indiceuno==2){
+
+variableuno = variableuno + 1;
+
+}
+
+document.getElementById("muestravariableuno").innerHTML = variableuno;
+
+funcioncomparar();
+
+}
+
+
+function funcionvariabledos(indicedos){
+
+if(indicedos==1){
+
+variabledos = variabledos - 1;
+
+}
+
+if(indicedos==2){
+
+variabledos = variabledos + 1;
+
+}
+
+document.getElementById("muestravariabledos").innerHTML = variabledos;
+
+funcioncomparar();
+
+}
+
+function funcioncomparar(){
+
+var mensaje ="";
+
+if((variableuno<10)&&(variableuno>variabledos)){
+
+mensaje = "La variableuno es menor que 10 y mayor que variabledos."
+
+}
+
+if((variableuno>10)&&(variableuno>variabledos)){
+
+mensaje = "La variableuno es mayor que 10 y mayor que variabledos."
+
+}
+
+if((variableuno==10)&&(variableuno>variabledos)){
+
+mensaje = "La variableuno es igual a 10 y mayor que variabledos."
+
+}
+
+if((variableuno<10)&&(variableuno<variabledos)){
+
+mensaje = "La variableuno es menor que 10 y menor que variabledos."
+
+}
+
+if((variableuno>10)&&(variableuno<variabledos)){
+
+mensaje = "La variableuno es mayor que 10 y menor que variabledos."
+
+}
+
+if((variableuno==10)&&(variableuno<variabledos)){
+
+mensaje = "La variableuno es igual a 10 y menor que variabledos."
+
+}
+
+document.getElementById("muestramensaje").innerHTML = mensaje;
+
+
+}
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Funciones condicionales y variables</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo vamos a trabajar con funciones condicionales, pero utilizando una doble condici&oacute;n. Dentro del par&eacute;ntesis de la funci&oacute;n condicional
+se pueden enlazar diversas condiciones con los caracteres && si se han de cumplir las dos condiciones a la vez, o los caracteres || si basta con que se cumpla 
+una de las dos condiciones. Se ha de tener un cuidado especial para no olvidar ning&uacute;n signo para abrir o cerrar par&eacute;ntesis.</p>
+<p>En este caso disponemos de cuatro flechas que llaman a las funciones funcionvariableuno(indiceuno) y funcionvariabledos(indicedos) y nos permiten aumentar 
+o disminuir el valor de las variables variableuno y variabledos. </p>
+<p>Al final de las dos funciones funcionvariableuno(indiceuno) y funcionvariabledos(indicedos) se muestran los valores de las variables, mediante la orden 
+document.getElementById("muestravariableuno").innerHTML = variableuno; y se llama a la funci&oacute;n funcioncomparar().</p>
+<p>La funci&oacute;n funcioncomparar() tiene dentro de ella 6 funciones condicionales que comprueban una doble condici&oacute;n cada una. Estas funciones condicionales 
+no agotan todas las posibilidades, por lo que puedes buscar otras que hagan que se muestren otros posibles mensajes.</p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+
+var variableuno = 0;<br><br>
+
+var variabledos = 0;<br><br>
+
+
+
+function funcionvariableuno(indiceuno){<br><br>
+
+if(indiceuno==1){<br>
+
+variableuno = variableuno - 1;<br>
+
+}<br><br>
+
+if(indiceuno==2){<br>
+
+variableuno = variableuno + 1;<br>
+
+}<br><br>
+
+document.getElementById("muestravariableuno").innerHTML = variableuno;<br><br>
+
+funcioncomparar();<br><br>
+
+}<br><br>
+
+
+
+
+function funcionvariabledos(indicedos){<br><br>
+
+if(indicedos==1){<br>
+
+variabledos = variabledos - 1;<br>
+
+}<br><br>
+
+if(indicedos==2){<br>
+
+variabledos = variabledos + 1;<br>
+
+}<br><br>
+
+document.getElementById("muestravariabledos").innerHTML = variabledos;<br><br>
+
+funcioncomparar();<br><br>
+
+}<br><br>
+
+function funcioncomparar(){<br><br>
+
+var mensaje ="";<br><br>
+
+if((variableuno<10)&&(variableuno>variabledos)){<br>
+
+mensaje = "La variableuno es menor que 10 y mayor que variabledos."<br>
+
+}<br><br>
+
+if((variableuno>10)&&(variableuno>variabledos)){<br>
+
+mensaje = "La variableuno es mayor que 10 y mayor que variabledos."<br>
+
+}<br><br>
+
+if((variableuno==10)&&(variableuno>variabledos)){<br>
+
+mensaje = "La variableuno es igual a 10 y mayor que variabledos."<br>
+
+}<br><br>
+
+if((variableuno<10)&&(variableuno&lt;variabledos)){<br>
+
+mensaje = "La variableuno es menor que 10 y menor que variabledos."<br>
+
+}<br><br>
+
+if((variableuno>10)&&(variableuno&lt;variabledos)){<br>
+
+mensaje = "La variableuno es mayor que 10 y menor que variabledos."<br>
+
+}<br><br>
+
+if((variableuno==10)&&(variableuno&lt;variabledos)){<br>
+
+mensaje = "La variableuno es igual a 10 y menor que variabledos."<br>
+
+}<br><br>
+
+document.getElementById("muestramensaje").innerHTML = mensaje;<br><br>
+
+
+}<br><br>
+
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="35" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Funciones condicionales</p>
+</font>
+</p>
+Con estas dos flechas puedes variar el valor de la variable variableuno.
+<p>
+<input type=image src="flecha_izqda.png" width="50" height="50" onclick="funcionvariableuno(1);" border ="2">
+
+<input type=image src="flecha_dcha.png" width="50" height="50" onclick="funcionvariableuno(2);" border ="2">
+</p>
+<p id ="muestravariableuno">
+0
+</p>
+Con estas otras dos flechas puedes variar el valor de la variable variabledos.
+<p>
+<input type=image src="flecha_izqda.png" width="50" height="50" onclick="funcionvariabledos(1);" border ="2">
+
+<input type=image src="flecha_dcha.png" width="50" height="50" onclick="funcionvariabledos(2);" border ="2">
+</p>
+<p id ="muestravariabledos">
+0
+</p>
+<p id ="muestramensaje"> 
+</p>
+
+</textarea><br>
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 25.- Dise&ntilde;a un documento web con un teclado con cuatro teclas, que te permita cambiar el valor de dos variables y mostrar 
+diferentes mensajes, en funci&oacute;n del valor de estas variables. Puedes copiar todo el c&oacute;digo y probarlo en 
+<a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript29.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript31.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,544 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+canvas {
+border : 1px gray solid; 
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Arrastrando varias im&aacute;genes dentro de un canvas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo podemos arrastrar varias im&aacute;genes por un canvas con el rat&oacute;n, para situarlas en cualquier posici&oacute;n del mismo.</p> 
+
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Distribuyendo im&aacute;genes con el rat&oacute;n</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo y ver como queda al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+
+
+
+&lt;canvas id="micanvas" width="500" height="500" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+
+&lt;/p&gt;<br>
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+	var canvas = document.createElement('micanvas');<br>
+	var trazo = micanvas.getContext('2d'); <br><br>
+        
+
+        var imagen1 = document.createElement('img');<br>
+        imagen1.src = 'paisaje.jpg';<br>
+        var imagen2 = document.createElement('img');<br>
+        imagen2.src = 'colibri.gif';<br>
+        var imagen3 = document.createElement('img');<br>
+        imagen3.src = 'colibri.jpg';<br>
+        imagen1.onload = function () { <br>
+        trazo.drawImage(imagen1, 0, 0, 500, 500); <br>
+        trazo.drawImage(imagen2, 0, 0, 100, 100); <br>
+        trazo.drawImage(imagen3, 100, 100, 100, 100); <br>
+        }<br><br>
+
+	var imagen1X = 0;<br>
+	var imagen1Y = 0;<br>
+	var imagen2X = 0;<br>
+	var imagen2Y = 0;<br>
+	var imagen3X = 100;<br>
+	var imagen3Y = 100;<br>
+	var control = 0;<br>
+
+
+
+
+        var raton = false;<br><br>
+
+
+
+        trazo.canvas.addEventListener('mousedown', function () { <br>
+            raton = true; <br>
+        }, false);<br><br>
+
+
+        trazo.canvas.addEventListener('mouseup', function () { <br>
+            raton = false; <br>
+	    control = 0;<br>
+        }, false);<br><br>
+
+
+        trazo.canvas.addEventListener('mousemove', function (event) {<br><br>
+
+            if (raton==true){<br><br>
+
+		var ClientRect = micanvas.getBoundingClientRect();<br>
+		x = Math.round(event.clientX - ClientRect.left);<br>
+		y = Math.round(event.clientY - ClientRect.top);<br><br>
+
+		if ((x>=imagen2X)&&(x<=imagen2X+100)&&(y>=imagen2Y)&&(y<=imagen2Y+100)&&((control==0)||(control==1))){<br><br>
+
+
+
+		imagen2X = x - 50;<br>
+		imagen2Y = y - 50;<br>
+		control = 1;<br><br>
+
+		}<br><br>
+
+
+		if ((x>=imagen3X)&&(x<=imagen3X+100)&&(y>=imagen3Y)&&(y<=imagen3Y+100)&&((control==0)||(control==3))){<br><br>
+
+
+
+		imagen3X = x - 50;<br>
+		imagen3Y = y - 50;<br>
+		control = 3;<br><br>
+
+		}<br><br>
+            	
+            }<br><br>
+
+
+            	limpiar();<br><br>
+
+        }, false);<br><br>
+        
+		                
+        function limpiar(){<br>
+
+
+
+            trazo.clearRect(0, 0, micanvas.width, micanvas.height);<br>
+            trazo.drawImage(imagen1, 0, 0, 500, 500);    <br>
+            	trazo.drawImage(imagen2, imagen2X, imagen2Y, 100, 100);<br>
+            	trazo.drawImage(imagen3, imagen3X, imagen3Y, 100, 100);<br>
+
+ 
+        }<br>
+
+&lt;/script&gt;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+</p>
+
+<p id = "canvasaqui">  </p>
+
+
+
+<p id="demo"></p>
+<p id="prueba1"></p>
+<p id="prueba4"></p>
+<p id="prueba2"></p>
+<p id="prueba3"></p>
+
+<script>
+
+
+
+	var micanvas = document.createElement('canvas');
+	micanvas.width = 500; 
+	micanvas.height = 500; 
+	var trazo = micanvas.getContext('2d'); 
+	document.body.appendChild(micanvas); 
+	document.getElementById('canvasaqui').appendChild(micanvas);
+
+
+
+
+
+
+    
+        
+
+        var imagen1 = document.createElement('img');
+        imagen1.src = 'paisaje.jpg';
+        var imagen2 = document.createElement('img');
+        imagen2.src = 'colibri.gif';
+        var imagen3 = document.createElement('img');
+        imagen3.src = 'colibri.jpg';
+        imagen1.onload = function () { 
+        trazo.drawImage(imagen1, 0, 0, 500, 500); 
+        trazo.drawImage(imagen2, 0, 0, 100, 100); 
+        trazo.drawImage(imagen3, 100, 100, 100, 100); 
+        }
+
+	var imagen1X = 0;
+	var imagen1Y = 0;
+	var imagen2X = 0;
+	var imagen2Y = 0;
+	var imagen3X = 100;
+	var imagen3Y = 100;
+	var control = 0;
+
+
+
+
+        var raton = false;
+
+
+
+        trazo.canvas.addEventListener('mousedown', function () { 
+            raton = true; 
+        }, false);
+
+
+        trazo.canvas.addEventListener('mouseup', function () { 
+            raton = false; 
+	    control = 0;
+
+        }, false);
+
+
+        trazo.canvas.addEventListener('mousemove', function (event) {
+
+            if (raton==true){
+
+		var ClientRect = micanvas.getBoundingClientRect();
+		x = Math.round(event.clientX - ClientRect.left);
+		y = Math.round(event.clientY - ClientRect.top);
+
+
+		if ((x>=imagen2X)&&(x<=imagen2X+100)&&(y>=imagen2Y)&&(y<=imagen2Y+100)&&((control==0)||(control==1))){
+
+
+
+		imagen2X = x - 50;
+		imagen2Y = y - 50;
+		control = 1;
+
+		}
+
+
+		if ((x>=imagen3X)&&(x<=imagen3X+100)&&(y>=imagen3Y)&&(y<=imagen3Y+100)&&((control==0)||(control==3))){
+
+
+
+		imagen3X = x - 50;
+		imagen3Y = y - 50;
+		control = 3;
+
+		}
+
+
+
+
+
+
+
+
+
+
+            }
+
+            	limpiar();
+
+
+
+        }, false);
+        
+		                 
+        function limpiar(){
+            trazo.clearRect(0, 0, micanvas.width, micanvas.height);
+            trazo.drawImage(imagen1, 0, 0, 500, 500);    
+            	trazo.drawImage(imagen2, imagen2X, imagen2Y, 100, 100);
+            	trazo.drawImage(imagen3, imagen3X, imagen3Y, 100, 100);
+		
+
+        }
+
+
+
+
+	
+
+	
+
+	</script>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 41.- Dise&ntilde;a un documento web en el que puedas mover dos personajes libremente delante de un fondo, dentro de un canvas. Puedes copiar todo el c&oacute;digo y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina</a>.</p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript45.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript47.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

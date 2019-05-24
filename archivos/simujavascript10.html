@@ -1,0 +1,370 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+<style>
+.textBox{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:18px;
+   color:#08088A;
+   vertical-align:bottom;
+}
+</style>
+
+<script type="text/javascript">
+
+
+function cambiarenlace1(){
+
+   var direccion1 = document.getElementById("enlacefoto");
+   var cambienlace1 = document.getElementById("enlace1").value;
+   direccion1.href = cambienlace1;
+
+}
+
+
+function cambiarenlace2(){
+
+   var direccion2 = document.getElementById("enlacetexto");
+   var cambienlace2 = document.getElementById("enlace2").value;
+   direccion2.href = cambienlace2;
+
+}
+
+function cambiarcelda2(){
+
+var texto = document.getElementById("celda2").value;
+
+document.getElementById("contcelda2").innerHTML=texto;
+
+
+}
+
+
+function cambiartarget(){
+
+
+   var target1 = document.getElementById("target").value;
+   var direccion2 = document.getElementById("enlacetexto");
+direccion2.target = "_blanK";
+if(target1=="blanK"){
+direccion2.target = "_blanK";
+}
+
+if(target1=="self"){
+direccion2.target = "_self";
+}
+   
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Enlazando otros contenidos</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Los enlaces son unos de los elementos m&aacute;s caracter&iacute;sticos de los contenidos web. Nos permiten ir de un documento a otro y de un contenido a 
+una serie interminable de ellos.</p>
+<p>Las etiquetas que nos permiten hacerlo son &lt;a href:""&gt; y &lt;/a&gt;. Entre estas dos etiquetas se situa el texto o la imagen que 
+queremos enlazar.</p>
+<p>Al hacer clic sobre este texto o imagen se abren los nuevos contenidos. La URL en donde se encuentran estos contenidos se ha de colocar 
+en la primera etiqueta, entre las comillas.</p> 
+<p>Esta etiqueta utiliza el atributo target para determinar si el nuevo contenido se abrir&aacute; en la misma ventana o en una nueva ventana. 
+El atributo target ="_blank" hace que el enlace se abra en una nueva ventana, por el contrario target = "_self" abre el contenido en la misma 
+ventana. Si no se utiliza este atributo el contenido enlazado se abre en la misma ventana.</p> 
+
+<p>En este ejemplo tenemos enlazados la primera imagen y el texto de la segunda celda. Prueba a modificar el texto de enlace, 
+las direcciones URL y el atributo target.</p> 
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+
+&lt;table width="350" border="1" bordercolor="#dddddd" 
+cellspacing="2" bgcolor="#dddddd"&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<br>
+&lt;a href="
+<textarea rows="1" cols="40" onchange="cambiarenlace1()" id ="enlace1" class="textBox" />
+https://es.wikipedia.org/wiki/Hiperenlace
+</textarea>
+"&gt;<br>
+&lt;img src="pezglobo.jpg"&gt;<br>
+&lt;/a&gt;<br>
+&lt;/td&gt;<br>
+&lt;td bgcolor="#11ddde" colspan="2"&gt;<br>
+&lt;a href="
+<textarea rows="1" cols="40" onchange="cambiarenlace2()" id ="enlace2" class="textBox" />
+https://es.wikipedia.org/wiki/Internet
+</textarea>" target="
+
+
+<select id="target" form="formulario" onchange="cambiartarget()" class="textBox" />
+    <option value="self">_self</option>
+    <option value="blank">_blank</option>
+
+    </select>
+&gt;<br>
+<textarea rows="1" cols="35" onchange="cambiarcelda2()" id ="celda2" class="textBox" />
+Internet
+</textarea><br>
+&lt;/a&gt;<br>
+&lt;/td&gt;<br>
+
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<br>
+Celda<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+Celda<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+Celda<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<br>
+&lt;img src="pezpayaso.jpg"&gt;<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>Celda<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>Celda<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+
+
+
+&lt;/table&gt;<br>
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;
+
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<TABLE id="dataTable" bgcolor="#dddddd" width="350px" border="1" cellSpacing="6">
+<TR>
+<td id="cols1"><a id = "enlacefoto" href="https://es.wikipedia.org/wiki/Hiperenlace"><img src="pezglobo.jpg"  id="contcelda1"></a></td>
+<td id="cols2" bgcolor="#11ddde" colspan="2"><a id = "enlacetexto" href="https://es.wikipedia.org/wiki/Internet" ><p id="contcelda2">
+
+Internet</p>
+</a>
+</td>
+
+</TR>
+<TR>
+<td><p id="contcelda4">Celda</p></td>
+<td><p id="contcelda5">Celda</p></td>
+<td><p id="contcelda6">Celda</p></td>
+</TR>
+<TR>
+<td><img src="pezpayaso.jpg" id="contcelda7"></td>
+<td><p id="contcelda8">Celda</p></td>
+<td><p id="contcelda9">Celda</p></td>
+</TR>
+       
+        
+
+     </TABLE>
+
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 6.- Has de hacer una p&aacute;gina web con varios textos e im&aacute;genes enlazados.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript09.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript11.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

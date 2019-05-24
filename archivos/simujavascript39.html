@@ -1,0 +1,373 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+dibujarpunto();
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;}
+
+
+function dibujarpunto(){
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+eval(textarea.value);
+
+}
+
+setInterval(dibujarpunto, 100);
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Im&aacute;genes animadas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>	
+En este ejemplo sobre el canvas se desplaza una rana verde, que aparece y desaparece. Para ello utilizamos de forma indefinida dos 
+ordenes que nos permiten desplazar el origen de coordenadas del canvas y girarlo. </p>
+<p>Para desplazar el origen de coordenadas se utiliza la orden ctx.translate(0, 0); y para girar el canvas la orden 
+ctx.rotate(-0.25);. </p>
+<p>La orden ctx.clearRect(0, 0, canvas.width, canvas.height); nos permite borrar el canvas antes de dibujar una nueva rana. Para que 
+todo esto ocurra de forma indefinida se utiliza la orden setInterval(dibujarcanvas, 100); que llama a la funci&oacute;n dibujarcanvas() cada 
+100 milisegundos.</p>
+
+<p>Haz todas las modificaciones que creas oportunas en el dibujo, para familiarizarte con el c&oacute;digo. Modifica las dimensiones de 
+la rana, el &aacute;ngulo de giro y los cambios de coordenadas.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+setInterval(dibujarcanvas, 100);<br><br>
+
+
+
+
+function dibujarcanvas(){<br><br>
+
+var canvas = document.getElementById("canvas");<br>
+var ctx = canvas.getContext("2d");<br>
+
+
+
+<textarea id="code" rows="10" cols="55" class="texto3" onchange = "dibujarpunto()">
+ctx.save();
+ctx.beginPath(); 
+ctx.clearRect(0, 0, canvas.width, canvas.height);  
+ctx.translate(0, 0); 
+ctx.rotate(-0.25);  
+var img1 = new Image();
+img1.src = 'rana.png';
+ctx.drawImage(img1, 0, 100, 300, 300);
+ctx.stroke();  
+</textarea><br>
+}<br><br>
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Elementos en movimiento</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo del canvas y ver que le ocurre a la rana al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+&lt;/p&gt;<br>
+&lt;canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+
+
+</p>
+
+
+
+        
+<canvas id="canvas" width="500" height="500" class="playable-canvas" style="border:1px solid #000000;">
+</canvas>
+
+<script type="text/javascript">
+
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
+var code = textarea.value;
+ctx.setTransform(1, 0, 0, 1, 0, 0); //borra todo el canvas
+
+
+function drawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawCanvas();
+});
+
+edit.addEventListener("click", function() {
+  textarea.focus();
+})
+
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
+</script>
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 34.- Dise&ntilde;a un documento web con una rana que gire de forma indefinida. Puedes copiar todo el c&oacute;digo y probarlo en 
+<a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript38.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript40.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,732 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+canvas {
+border : 1px gray solid; 
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Un rompecabezas dentro de un canvas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Utilizando el c&oacute;digo del ejercicio anterior podemos crear un rompecabezas que podremos resolver arrastrando las piezas con el rat&oacute;n.</p> 
+
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Peque&ntilde;o rompecabezas</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo y ver como queda al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+
+
+
+&lt;canvas id="micanvas" width="500" height="500" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+
+&lt;/p&gt;<br>
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+	var canvas = document.createElement('micanvas');<br>
+	var trazo = micanvas.getContext('2d'); <br><br>
+        
+
+        var imagen0 = document.createElement('img');<br>
+        imagen0.src = 'flores.jpg';<br>
+        var imagen1 = document.createElement('img');<br>
+        imagen1.src = 'flores09.jpg';<br>
+        var imagen2 = document.createElement('img');<br>
+        imagen2.src = 'flores06.jpg';<br>
+        var imagen3 = document.createElement('img');<br>
+        imagen3.src = 'flores01.jpg';<br>
+        var imagen4 = document.createElement('img');<br>
+        imagen4.src = 'flores02.jpg';<br>
+        var imagen5 = document.createElement('img');<br>
+        imagen5.src = 'flores03.jpg';<br>
+        var imagen6 = document.createElement('img');<br>
+        imagen6.src = 'flores04.jpg';<br>
+        var imagen7 = document.createElement('img');<br>
+        imagen7.src = 'flores05.jpg';<br>
+        var imagen8 = document.createElement('img');<br>
+        imagen8.src = 'flores07.jpg';<br>
+        var imagen9 = document.createElement('img');<br>
+        imagen9.src = 'flores08.jpg';<br><br>
+
+        imagen1.onload = function () { <br>
+        trazo.drawImage(imagen0, 0, 0, 500, 500);<br> 
+        trazo.drawImage(imagen1, 0, 0, 166, 166); <br>
+        trazo.drawImage(imagen2, 166, 0, 166, 166); <br>
+        trazo.drawImage(imagen3, 332, 0, 166, 166); <br>
+        trazo.drawImage(imagen4, 0, 166, 166, 166); <br>
+        trazo.drawImage(imagen5, 166, 166, 166, 166); <br>
+        trazo.drawImage(imagen6, 332, 166, 166, 166);<br>
+        trazo.drawImage(imagen7, 0, 332, 166, 166); <br>
+        trazo.drawImage(imagen8, 166, 332, 166, 166); <br>
+        trazo.drawImage(imagen9, 332, 332, 166, 166);<br>
+        }<br><br>
+
+	var imagen0X = 0;<br>
+	var imagen0Y = 0;<br>
+	var imagen1X = 0;<br>
+	var imagen1Y = 0;<br>
+	var imagen2X = 166;<br>
+	var imagen2Y = 0;<br>
+	var imagen3X = 332;<br>
+	var imagen3Y = 0;<br>
+	var imagen4X = 0;<br>
+	var imagen4Y = 166;<br>
+	var imagen5X = 166;<br>
+	var imagen5Y = 166;<br>
+	var imagen6X = 332;<br>
+	var imagen6Y = 166;<br>
+	var imagen7X = 0;<br>
+	var imagen7Y = 332;<br>
+	var imagen8X = 166;<br>
+	var imagen8Y = 332;<br>
+	var imagen9X = 332;<br>
+	var imagen9Y = 332;<br>
+	var control = 0;<br>
+
+
+
+
+        var raton = false;<br><br>
+
+
+
+        trazo.canvas.addEventListener('mousedown', function () { <br>
+            raton = true; <br>
+        }, false);<br><br>
+
+
+        trazo.canvas.addEventListener('mouseup', function () { <br>
+            raton = false; <br>
+	    control = 0;<br>
+        }, false);<br><br>
+
+
+        trazo.canvas.addEventListener('mousemove', function (event) {<br><br>
+
+            if (raton==true){<br><br>
+
+		var ClientRect = micanvas.getBoundingClientRect();<br>
+		x = Math.round(event.clientX - ClientRect.left);<br>
+		y = Math.round(event.clientY - ClientRect.top);<br><br>
+
+		if ((x>=imagen1X)&&(x<=imagen1X+166)&&(y>=imagen1Y)&&(y<=imagen1Y+166)&&((control==0)||(control==1))){<br><br>
+
+		imagen1X = x - 83;<br>
+		imagen1Y = y - 83;<br>
+		control = 1;<br><br>
+
+		}<br><br>
+
+		if ((x>=imagen2X)&&(x<=imagen2X+166)&&(y>=imagen2Y)&&(y<=imagen2Y+166)&&((control==0)||(control==2))){<br><br>
+
+		imagen2X = x - 83;<br>
+		imagen2Y = y - 83;<br>
+		control = 2;<br><br>
+
+		}<br><br>
+
+		if ((x>=imagen3X)&&(x<=imagen3X+166)&&(y>=imagen3Y)&&(y<=imagen3Y+166)&&((control==0)||(control==3))){<br><br>
+
+		imagen3X = x - 83;<br>
+		imagen3Y = y - 83;<br>
+		control = 3;<br><br>
+
+		}<br><br>
+
+		if ((x>=imagen4X)&&(x<=imagen4X+166)&&(y>=imagen4Y)&&(y<=imagen4Y+166)&&((control==0)||(control==4))){<br><br>
+
+		imagen4X = x - 83;<br>
+		imagen4Y = y - 83;<br>
+		control = 4;<br>
+
+		}<br>
+
+
+		if ((x>=imagen5X)&&(x<=imagen5X+166)&&(y>=imagen5Y)&&(y<=imagen5Y+166)&&((control==0)||(control==5))){<br><br>
+
+		imagen5X = x - 83;<br>
+		imagen5Y = y - 83;<br>
+		control = 5;<br><br>
+
+		}<br><br>
+
+		if ((x>=imagen6X)&&(x<=imagen6X+166)&&(y>=imagen6Y)&&(y<=imagen6Y+166)&&((control==0)||(control==6))){<br><br>
+
+		imagen6X = x - 83;<br>
+		imagen6Y = y - 83;<br>
+		control = 6;<br><br>
+
+		}<br><br>
+
+		if ((x>=imagen7X)&&(x<=imagen7X+166)&&(y>=imagen7Y)&&(y<=imagen7Y+166)&&((control==0)||(control==7))){<br><br>
+
+		imagen7X = x - 83;<br>
+		imagen7Y = y - 83;<br>
+		control = 7;<br><br>
+
+		}<br><br>
+
+		if ((x>=imagen8X)&&(x<=imagen8X+166)&&(y>=imagen8Y)&&(y<=imagen8Y+166)&&((control==0)||(control==8))){<br><br>
+
+		imagen8X = x - 83;<br>
+		imagen8Y = y - 83;<br>
+		control = 8;<br><br>
+
+		}<br><br>
+
+
+		if ((x>=imagen9X)&&(x<=imagen9X+166)&&(y>=imagen9Y)&&(y<=imagen9Y+166)&&((control==0)||(control==9))){<br><br>
+
+		imagen9X = x - 83;<br>
+		imagen9Y = y - 83;<br>
+		control = 9;<br><br>
+
+		}<br><br>
+
+            	
+            }<br><br>
+
+
+            	limpiar();<br><br>
+
+        }, false);<br><br>
+        
+		                
+        function limpiar(){<br>
+
+
+
+            trazo.clearRect(0, 0, micanvas.width, micanvas.height);<br>
+            trazo.drawImage(imagen0, 0, 0, 500, 500);   <br> 
+            	trazo.drawImage(imagen1, imagen1X, imagen1Y, 166, 166);<br>
+            	trazo.drawImage(imagen2, imagen2X, imagen2Y, 166, 166);<br>
+            	trazo.drawImage(imagen3, imagen3X, imagen3Y, 166, 166);<br>
+            	trazo.drawImage(imagen4, imagen4X, imagen4Y, 166, 166);<br>
+            	trazo.drawImage(imagen5, imagen5X, imagen5Y, 166, 166);<br>
+            	trazo.drawImage(imagen6, imagen6X, imagen6Y, 166, 166);<br>
+            	trazo.drawImage(imagen7, imagen7X, imagen7Y, 166, 166);<br>
+            	trazo.drawImage(imagen8, imagen8X, imagen8Y, 166, 166);<br>
+            	trazo.drawImage(imagen9, imagen9X, imagen9Y, 166, 166);<br><br>
+
+ 
+        }<br>
+
+&lt;/script&gt;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+</p>
+
+<p id = "canvasaqui">  </p>
+
+
+
+<p id="demo"></p>
+<p id="prueba1"></p>
+<p id="prueba4"></p>
+<p id="prueba2"></p>
+<p id="prueba3"></p>
+
+<script>
+
+
+
+	var micanvas = document.createElement('canvas');
+	micanvas.width = 500; 
+	micanvas.height = 500; 
+	var trazo = micanvas.getContext('2d'); 
+	document.body.appendChild(micanvas); 
+	document.getElementById('canvasaqui').appendChild(micanvas);
+
+
+
+
+
+
+    
+        
+
+        var imagen0 = document.createElement('img');
+        imagen0.src = 'flores.jpg';
+        var imagen1 = document.createElement('img');
+        imagen1.src = 'flores09.jpg';
+        var imagen2 = document.createElement('img');
+        imagen2.src = 'flores06.jpg';
+        var imagen3 = document.createElement('img');
+        imagen3.src = 'flores01.jpg';
+        var imagen4 = document.createElement('img');
+        imagen4.src = 'flores02.jpg';
+        var imagen5 = document.createElement('img');
+        imagen5.src = 'flores03.jpg';
+        var imagen6 = document.createElement('img');
+        imagen6.src = 'flores04.jpg';
+        var imagen7 = document.createElement('img');
+        imagen7.src = 'flores05.jpg';
+        var imagen8 = document.createElement('img');
+        imagen8.src = 'flores07.jpg';
+        var imagen9 = document.createElement('img');
+        imagen9.src = 'flores08.jpg';
+
+        imagen1.onload = function () { 
+        trazo.drawImage(imagen0, 0, 0, 500, 500); 
+        trazo.drawImage(imagen1, 0, 0, 166, 166); 
+        trazo.drawImage(imagen2, 166, 0, 166, 166); 
+        trazo.drawImage(imagen3, 332, 0, 166, 166); 
+        trazo.drawImage(imagen4, 0, 166, 166, 166); 
+        trazo.drawImage(imagen5, 166, 166, 166, 166); 
+        trazo.drawImage(imagen6, 332, 166, 166, 166);
+        trazo.drawImage(imagen7, 0, 332, 166, 166); 
+        trazo.drawImage(imagen8, 166, 332, 166, 166); 
+        trazo.drawImage(imagen9, 332, 332, 166, 166);
+        }
+
+	var imagen0X = 0;
+	var imagen0Y = 0;
+	var imagen1X = 0;
+	var imagen1Y = 0;
+	var imagen2X = 166;
+	var imagen2Y = 0;
+	var imagen3X = 332;
+	var imagen3Y = 0;
+	var imagen4X = 0;
+	var imagen4Y = 166;
+	var imagen5X = 166;
+	var imagen5Y = 166;
+	var imagen6X = 332;
+	var imagen6Y = 166;
+	var imagen7X = 0;
+	var imagen7Y = 332;
+	var imagen8X = 166;
+	var imagen8Y = 332;
+	var imagen9X = 332;
+	var imagen9Y = 332;
+
+	var control = 0;
+
+
+
+
+        var raton = false;
+
+
+
+        trazo.canvas.addEventListener('mousedown', function () { 
+            raton = true; 
+        }, false);
+
+
+        trazo.canvas.addEventListener('mouseup', function () { 
+            raton = false; 
+	    control = 0;
+
+        }, false);
+
+
+        trazo.canvas.addEventListener('mousemove', function (event) {
+
+            if (raton==true){
+
+		var ClientRect = micanvas.getBoundingClientRect();
+		x = Math.round(event.clientX - ClientRect.left);
+		y = Math.round(event.clientY - ClientRect.top);
+
+
+		if ((x>=imagen1X)&&(x<=imagen1X+166)&&(y>=imagen1Y)&&(y<=imagen1Y+166)&&((control==0)||(control==1))){
+
+		imagen1X = x - 83;
+		imagen1Y = y - 83;
+		control = 1;
+
+		}
+
+		if ((x>=imagen2X)&&(x<=imagen2X+166)&&(y>=imagen2Y)&&(y<=imagen2Y+166)&&((control==0)||(control==2))){
+
+		imagen2X = x - 83;
+		imagen2Y = y - 83;
+		control = 2;
+
+		}
+
+		if ((x>=imagen3X)&&(x<=imagen3X+166)&&(y>=imagen3Y)&&(y<=imagen3Y+166)&&((control==0)||(control==3))){
+
+		imagen3X = x - 83;
+		imagen3Y = y - 83;
+		control = 3;
+
+		}
+
+		if ((x>=imagen4X)&&(x<=imagen4X+166)&&(y>=imagen4Y)&&(y<=imagen4Y+166)&&((control==0)||(control==4))){
+
+		imagen4X = x - 83;
+		imagen4Y = y - 83;
+		control = 4;
+
+		}
+
+
+		if ((x>=imagen5X)&&(x<=imagen5X+166)&&(y>=imagen5Y)&&(y<=imagen5Y+166)&&((control==0)||(control==5))){
+
+		imagen5X = x - 83;
+		imagen5Y = y - 83;
+		control = 5;
+
+		}
+
+		if ((x>=imagen6X)&&(x<=imagen6X+166)&&(y>=imagen6Y)&&(y<=imagen6Y+166)&&((control==0)||(control==6))){
+
+		imagen6X = x - 83;
+		imagen6Y = y - 83;
+		control = 6;
+
+		}
+
+		if ((x>=imagen7X)&&(x<=imagen7X+166)&&(y>=imagen7Y)&&(y<=imagen7Y+166)&&((control==0)||(control==7))){
+
+		imagen7X = x - 83;
+		imagen7Y = y - 83;
+		control = 7;
+
+		}
+
+		if ((x>=imagen8X)&&(x<=imagen8X+166)&&(y>=imagen8Y)&&(y<=imagen8Y+166)&&((control==0)||(control==8))){
+
+		imagen8X = x - 83;
+		imagen8Y = y - 83;
+		control = 8;
+
+		}
+
+
+		if ((x>=imagen9X)&&(x<=imagen9X+166)&&(y>=imagen9Y)&&(y<=imagen9Y+166)&&((control==0)||(control==9))){
+
+		imagen9X = x - 83;
+		imagen9Y = y - 83;
+		control = 9;
+
+		}
+
+
+
+
+            }
+
+            	limpiar();
+
+
+
+        }, false);
+        
+		                 
+        function limpiar(){
+            trazo.clearRect(0, 0, micanvas.width, micanvas.height);
+            trazo.drawImage(imagen0, 0, 0, 500, 500);    
+            	trazo.drawImage(imagen1, imagen1X, imagen1Y, 166, 166);
+            	trazo.drawImage(imagen2, imagen2X, imagen2Y, 166, 166);
+            	trazo.drawImage(imagen3, imagen3X, imagen3Y, 166, 166);
+            	trazo.drawImage(imagen4, imagen4X, imagen4Y, 166, 166);
+            	trazo.drawImage(imagen5, imagen5X, imagen5Y, 166, 166);
+            	trazo.drawImage(imagen6, imagen6X, imagen6Y, 166, 166);
+            	trazo.drawImage(imagen7, imagen7X, imagen7Y, 166, 166);
+            	trazo.drawImage(imagen8, imagen8X, imagen8Y, 166, 166);
+            	trazo.drawImage(imagen9, imagen9X, imagen9Y, 166, 166);
+		
+
+        }
+
+
+
+
+	
+
+	
+
+	</script>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 42.- Dise&ntilde;a un documento web con un rompecabezas, dentro de un canvas. Puedes copiar todo el c&oacute;digo y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina</a>.</p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript46.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript48.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

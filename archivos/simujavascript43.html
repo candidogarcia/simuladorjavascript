@@ -1,0 +1,584 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+canvas {
+border : 1px gray solid; 
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Un sat&eacute;lite artificial pasa delante del Sol</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo, de nuevo, una imagen se desplaza y gira. El sat&eacute;lite artificial se desplaza en diagonal, desde la esquina superior 
+izquierda hasta la inferior derecha. A la vez, va aumentando su tama&ntilde;o, proporcionando la sensaci&oacute;n de que se acerca a nosotros. 
+Una vez ha llegado a la esquina inferior se vuelve a dar valor a las diferentes variables, para que vuelva a aparecer por la esquina 
+superior izquierda.</p> 
+
+<p>Haz todas las modificaciones que creas oportunas en la animaci&oacute;n, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>El sat&eacute;lite artifical se desplaza y gira</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo del canvas y ver como queda la animaci&oacute;n al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+&lt;/p&gt;<br>
+&lt;canvas id="canvas" width="<textarea rows="1" cols="4" onchange="cambiaranchuracanvas()" id ="anchocanvas" class="texto3" />500</textarea>" height="<textarea rows="1" cols="4" onchange="cambiaralturacanvas()" id ="altocanvas" class="texto3" />500</textarea>" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+
+	
+	var contador = 0;<br>
+	var primeraimagenx = <textarea rows="1" cols="4" onchange="cambiarimagen1x()" id ="imagenunox" class="texto3" />200</textarea>; <br>
+	var primeraimageny = <textarea rows="1" cols="4" onchange="cambiarimagen1y()" id ="imagenunoy" class="texto3" />20</textarea>;<br>
+	var segundaimagenx = 0; <br>
+	var segundaimageny = 0;<br>
+	var anchoimagen = 137;<br>
+	var altoimagen = 137;<br>
+	var incrementoimagen = 0.1<br>
+
+	primeraimagen = new Image();<br>
+	primeraimagen.src = '<textarea rows="1" cols="30" onchange="cambiarimagen1()" id ="imagenuno" class="texto3" />sol.jpg</textarea>'; <br>
+        segundaimagen = new Image();<br>
+        segundaimagen.src = '<textarea rows="1" cols="30" onchange="cambiarimagen2()" id ="imagendos" class="texto3" />satellite.gif</textarea>'; <br>
+
+	
+
+
+	radian = Math.PI/180; <br>
+
+
+	var canvas = document.getElementById("canvas");<br>
+	var context = canvas.getContext('2d'); <br>
+        context.fillStyle="#FFFFFF";<br>
+        context.fillRect(0, 0, canvas.width, canvas.height);<br><br>
+
+
+	setInterval(loop, 
+	<textarea rows="1" cols="4" onchange="cambiarvelocidad()" id ="velocidad" class="texto3" />20</textarea>); <br><br>	
+
+
+	function loop() { <br><br>
+
+		context.clearRect(0,0,canvas.width, canvas.height); <br>
+        	context.fillStyle="<textarea rows="1" cols="9" onchange="cambiarcolorfondo()" id ="fondocolor" class="texto3" />white</textarea>";<br>
+                context.fillRect(0, 0, canvas.width, canvas.height);<br>
+                context.strokeRect(0, 0, canvas.width, canvas.height);<br>
+		context.drawImage(primeraimagen, primeraimagenx, primeraimageny);<br>
+		rotarimagen(segundaimagen, segundaimagenx, segundaimageny, contador/<textarea rows="1" cols="2" onchange="cambiartextoreduccion1()" id ="reduc1" class="texto3" />1</textarea>, anchoimagen, altoimagen);<br><br>
+ 
+		anchoimagen = anchoimagen + incrementoimagen;<br>
+		altoimagen = altoimagen + incrementoimagen;<br><br>
+
+		segundaimagenx = segundaimagenx + 0.1;<br>
+		segundaimageny = segundaimageny + 0.1;<br><br>
+
+
+
+
+		if(segundaimagenx>500){<br>
+		segundaimagenx = 0;<br>
+		segundaimageny = 0;<br>
+		anchoimagen = 137;<br>
+		altoimagen = 137;<br>
+		}<br><br>
+
+
+
+		contador+=2; <br><br>
+
+	}<br><br>
+	
+	
+	function rotarimagen(imagen, x, y, angulo, anchoimagen, altoimagen) { <br><br>
+
+		
+		context.save(); <br>
+
+		
+		context.translate(x, y);<br>
+
+		
+		context.rotate(angulo * radian);<br>
+
+		
+		context.drawImage(imagen, -(anchoimagen/2), -(altoimagen/2), anchoimagen, altoimagen);<br>
+
+		
+		context.restore(); <br><br>
+	}<br><br>
+
+&lt;/script&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+</p>
+
+<p id = "canvasaqui">  </p>
+
+
+<p id="prueba"></p>
+
+<script>
+
+
+
+
+
+	window.addEventListener("load", init); 
+	
+
+	var imagen1 = 'sol.jpg';
+	var imagen2 = 'satellite.gif';
+	var contador11;
+	var tiempo = 10;
+	var primeraimagenx = 200; 
+	var primeraimageny = 20;
+	var segundaimagenx = 0; 
+	var segundaimageny = 0;
+	var reduccion1 = 1;
+	var reduccion2 = 1;
+	var reduccion3 = 1;
+	var textocontador1 = "contador";
+	var textocontador2 = "contador";
+	var textocontador3 = "contador";
+	var anchuracanvas = 500;
+	var alturacanvas = 500;
+	var colorfondo = "#FFFFFF";
+	var contador = 0;
+
+	var anchoimagen = 137;
+	var altoimagen = 137;
+
+	var incrementoimagen = 0.1
+
+
+	primeraimagen = new Image();
+	primeraimagen.src = imagen1;
+	//primeraimagen.width = 30;
+	//primeraimagen.height = 30;
+        segundaimagen = new Image();
+        segundaimagen.src = imagen2;
+
+	radian = Math.PI/180; 
+
+
+	var micanvas = document.createElement('canvas');
+	micanvas.id = 'canvas1';
+	micanvas.width = anchuracanvas; 
+	micanvas.height = alturacanvas; 
+	var context = micanvas.getContext('2d'); 
+
+
+	document.body.appendChild(micanvas); 
+	document.getElementById('canvasaqui').appendChild(micanvas);
+        context.fillStyle="white";
+        context.fillRect(0, 0, micanvas.width, micanvas.height);
+        context.fillRect(0, 0, micanvas.width, micanvas.height);
+
+
+	function cambiarvelocidad(){
+	tiempo = document.getElementById("velocidad").value;
+	clearInterval(contador11);
+	init();
+	}
+
+	function cambiarimagen1(){
+	imagen1 = document.getElementById("imagenuno").value;
+	primeraimagen.src = imagen1;
+	}
+
+	function cambiarimagen2(){
+	imagen2 = document.getElementById("imagendos").value;
+	segundaimagen.src = imagen2;
+	}
+
+
+
+	function cambiarimagen1x(){
+	primeraimagenx = document.getElementById("imagenunox").value;
+	}
+
+	function cambiarimagen1y(){
+	primeraimageny = document.getElementById("imagenunoy").value;
+	}
+
+	function cambiarimagen2x(){
+	segundaimagenx = document.getElementById("imagendosx").value;
+	}
+
+	function cambiarimagen2y(){
+	segundaimageny = document.getElementById("imagendosy").value;
+	}
+
+
+	function cambiartextocontador1(){
+	textocontador1 = document.getElementById("texto1contador").value;
+	}
+
+	function cambiartextocontador2(){
+	textocontador2 = document.getElementById("texto2contador").value;
+	}
+
+	function cambiartextocontador3(){
+	textocontador3 = document.getElementById("texto3contador").value;
+	}
+
+	function cambiartextoreduccion1(){
+	reduccion1 = document.getElementById("reduc1").value;
+	}
+
+	function cambiartextoreduccion2(){
+	reduccion2 = document.getElementById("reduc2").value;
+	}
+
+	function cambiartextoreduccion3(){
+	reduccion3 = document.getElementById("reduc3").value;
+	}
+
+
+	function cambiaranchuracanvas(){
+	anchuracanvas = document.getElementById("anchocanvas").value;
+	micanvas.width = anchuracanvas; 
+	}
+
+	function cambiaralturacanvas(){
+	alturacanvas = document.getElementById("altocanvas").value;
+	micanvas.height = alturacanvas; 
+	}
+
+	function cambiarcolorfondo(){
+	colorfondo = document.getElementById("fondocolor").value;
+	}
+
+
+
+	function init(){
+	contador11 = setInterval(loop, tiempo); 	
+	}
+
+
+
+	function loop() { 
+		context.clearRect(0,0,micanvas.width, micanvas.height); 
+        	context.fillStyle=colorfondo;
+                context.fillRect(0, 0, micanvas.width, micanvas.height);
+                context.strokeRect(0, 0, micanvas.width, micanvas.height);
+		context.drawImage(primeraimagen, primeraimagenx, primeraimageny);
+
+
+		rotarimagen(segundaimagen,segundaimagenx,segundaimageny,contador/reduccion1, anchoimagen, altoimagen); 
+
+		contador = contador + 0.5;
+
+	anchoimagen = anchoimagen + incrementoimagen;
+	altoimagen = altoimagen + incrementoimagen;
+
+	segundaimagenx = segundaimagenx + 0.1;
+	segundaimageny = segundaimageny + 0.1;
+
+	if(segundaimagenx>500){
+	segundaimagenx = 0;
+	segundaimageny = 0;
+	anchoimagen = 137;
+	altoimagen = 137;
+	}
+
+
+	}
+	
+	
+	function rotarimagen(imagen, x, y, angulo, anchoimagen, altoimagen) { 
+
+		// save the current co-ordinate system 
+		// before we screw with it
+		context.save(); 
+
+		// move to the middle of where we want to draw our image
+		context.translate(x, y);
+
+		// rotate around that point, converting our 
+		// angle from degrees to radians 
+		context.rotate(angulo * radian);
+
+		// draw it up and to the left by half the width
+		// and height of the image 
+		context.drawImage(imagen, -(anchoimagen/2), -(altoimagen/2), anchoimagen, altoimagen);
+
+		// and restore the co-ords to how they were when we began
+		context.restore(); 
+	}
+	
+
+	</script>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 38.- Dise&ntilde;a un documento web con una animaci&oacute;n que tenga alg&uacute;n personaje que se desplace y gire, creado sobre un canvas. Puedes copiar todo 
+el c&oacute;digo y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina</a>. Has de quitar los saltos de linea que 
+generan las ventanas de texto en las &oacute;rdenes primeraimagen.src = "sol.jpg";, y los de las otras im&aacute;genes, y tambi&eacute;n los saltos de la 
+orden context.fillStyle="white";, porque sin&oacute; no funciona. </p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript42.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript44.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

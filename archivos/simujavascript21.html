@@ -1,0 +1,393 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var indice1="parrafo";
+
+var indice2="parrafo";
+
+var indice3="parrafo";
+
+var fuente="italic bold 20px arial,serif";
+
+var color="#ff0000";
+
+var texto="Este es el primer texto";
+
+function funcionuno(){
+       
+document.getElementById(indice1).innerHTML=texto;
+document.getElementById(indice2).style.font = fuente;
+document.getElementById(indice3).style.color = color;
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("texto").innerHTML = parrafo1;}
+
+
+function cambiarpagina2(){
+
+var parrafo2 = document.getElementById("codigo2").value;
+document.getElementById("boton").innerHTML = parrafo2;}
+
+
+function cambiarpagina3(){
+
+var parrafo3 = document.getElementById("codigo3").value;
+document.getElementById("contenedor").innerHTML = parrafo3;}
+
+function funcioncargar(){
+var parrafo3 = document.getElementById("codigo3").value;
+
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+function cambiarindice1(){
+
+indice1 = document.getElementById("canviindi1").value;
+
+
+}
+
+function cambiarindice2(){
+
+indice2 = document.getElementById("canviindi2").value;
+
+
+}
+
+
+function cambiarindice3(){
+
+indice3 = document.getElementById("canviindi3").value;
+
+
+}
+
+function cambiartexto(){
+
+texto = document.getElementById("canvitext").value;
+
+
+}
+
+function cambiarfuente(){
+
+fuente = document.getElementById("canvifuente").value;
+
+}
+
+function cambiarcolor(){
+
+color = document.getElementById("canvicolor").value;
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Cambiando el texto y sus atributos</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo, mediante el bot&oacute;n podemos modificar el texto y sus atributos.</p>
+<p>Para ello se utilizan las &oacute;rdenes document.getElementById("parrafo").style.font = "italic bold 20px arial,serif"; y 
+document.getElementById("parrafo").style.color = "#ff0000";.</p>
+<p>Haz todas las modificaciones que creas oportunas, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+function funcionuno(){<br>
+
+document.getElementById("
+<textarea rows="1" cols="10" onchange="cambiarindice1()" id ="canviindi1" class="texto3" />
+parrafo</textarea><br>
+").innerHTML="
+<textarea rows="1" cols="30" onchange="cambiartexto()" id ="canvitext" class="texto3" />
+Este es el primer texto</textarea>
+";<br>
+document.getElementById("
+<textarea rows="1" cols="10" onchange="cambiarindice2()" id ="canviindi2" class="texto3" />
+parrafo</textarea><br>
+").style.font = "
+<textarea rows="1" cols="35" onchange="cambiarfuente()" id ="canvifuente" class="texto3" />
+italic bold 20px arial,serif</textarea>
+";<br>
+document.getElementById("
+<textarea rows="1" cols="10" onchange="cambiarindice3()" id ="canviindi3" class="texto3" />
+parrafo</textarea><br>
+").style.color = "
+<textarea rows="1" cols="10" onchange="cambiarcolor()" id ="canvicolor" class="texto3" />
+#ff0000</textarea>
+";<br>
+}<br><br>
+
+
+
+
+
+
+&lt;/script&gt;<br>
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="6" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<font size="5" color="green" face="Sans-serif">
+<p>Como muestra vale un bot&oacute;n</p>
+</font>
+</textarea><br>
+&lt;/p&gt;<br>
+
+&lt;p&gt;<br>
+<textarea rows="6" cols="55" onchange="cambiarpagina2()" id ="codigo2" class="texto3" />
+<input type="button" value="Bot&oacute;n" onclick="funcionuno();">
+</textarea><br>
+&lt;/p&gt;<br>
+<textarea rows="6" cols="55" onchange="cambiarpagina3()" id ="codigo3" class="texto3" />
+&lt;p id="parrafo"&gt;
+Texto que cambia
+&lt;/p&gt;
+</textarea><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+<p id = "texto">
+<font size="5" color="green" face="Sans-serif">
+Como muestra vale un bot&oacute;n
+</font>
+</p>
+<p id="boton">
+<input type="button" value="Bot&oacute;n" OnClick="funcionuno();">
+
+</p>
+<p id="contenedor">
+
+
+Texto que cambia
+<br> 
+</p>
+</p>
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 16.- Crea un documento web con un bot&oacute;n que modifique el texto que aparece en un p&aacute;rrafo concreto y sus atributos.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript20.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript22.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

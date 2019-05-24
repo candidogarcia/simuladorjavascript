@@ -1,0 +1,303 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.texto4{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+text-align: right;
+vertical-align:bottom;
+}
+
+.texto5{
+font-family:Times New Roman;
+font-size:16px;
+color:#000000;
+text-align: left;
+vertical-align:bottom;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("texto1").innerHTML = parrafo1;}
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Ejercicio final de formato de texto</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Ahora vamos a realizar este ejercicio desde cero. En la ventana de texto has de ir introduciendo los diferentes p&aacute;rrafos con el c&oacute;digo 
+necesario para dar formato al texto, utilizando tambi&eacute;n hojas de estilo CSS.</p>
+<p>Para empezar una etiqueta &lt;blockquote&gt; nos permitir&aacute; introducir un tabulador que afectar&aacute; a todo el texto.</p>
+<p>Ahora hemos de introducir el t&iacute;tulo "Los delfines", utilizando la hoja de estilo CSS texto1, mediante la etiqueta &lt;p class="texto1"/&gt;.</p>
+<p>En el primer p&aacute;rrafo se ha de introducir este texto: "Los delf&iacute;nidos (Delphinidae), llamados com&uacute;nmente delfines oce&aacute;nicos, son una 
+familia de cet&aacute;ceos odontocetos muy heterog&eacute;nea, que comprende 34 especies.", utilizando la hoja de estilo CSS texto5.</p>
+<p>Ahora se vuelve a introducir una etiqueta &lt;blockquote&gt; que nos permitir&aacute; poner un nuevo tabulador.</p>
+<p>En el segundo p&aacute;rrafo se ha de introducir este texto: "Miden entre 2 y 9 metros de largo, con el cuerpo fusiforme y la cabeza de gran tama&ntilde;o, 
+el hocico alargado y solo un espir&aacute;culo en la parte superior de la cabeza.", utilizando la hoja de estilo CSS texto4.</p>
+<p>Ahora mediante la etiqueta &lt;/blockquote&gt; eliminamos un tabulador.</p>
+<p>En el tercer p&aacute;rrafo se ha de introducir este texto: "Est&aacute;n entre las especies m&aacute;s inteligentes que habitan el planeta. Se encuentran relativamente 
+cerca de las costas y a menudo interact&uacute;an con el ser humano.", utilizando la hoja de estilo CSS texto2.</p>
+<p>Ahora podemos crear algun enlace con otros contenidos. Enlazaremos una palabra, en cada p&aacute;rrafo, con contenidos relacionados.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;style type="text/css"&gt;<br>
+.texto1 {  <br>
+font-family: Georgia, "Times New Roman", serif;<br>
+font-size:32px;<br> 
+color: red; <br> 
+}<br>
+.texto2 {<br>
+font-family: Helvetica, Geneva, Arial, sans-serif;<br>
+font-size:12px;<br>
+color: green;  <br>
+}<br>
+.texto3{<br>
+font-family:Arial, Helvetica, sans-serif;<br>
+font-size:18px;<br>
+color:#08088A;<br>
+}<br>
+.texto4{<br>
+font-family:Arial, Helvetica, sans-serif;<br>
+font-size:18px;<br>
+color:#08088A;<br>
+text-align: right;<br>
+}<br>
+.texto5{<br>
+font-family:Times New Roman;<br>
+font-size:16px;<br>
+color:#000000;<br>
+text-align: left;<br>
+}
+
+&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+
+<textarea rows="50" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+
+
+</textarea><br>
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+<p id = "texto1">
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 10.- Copia el c&oacute;digo que has ido generando en la ventana de texto de la izquierda y crea un documento web con esos textos 
+modificados con difertentes hojas de estilo CSS.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript13.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript15.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

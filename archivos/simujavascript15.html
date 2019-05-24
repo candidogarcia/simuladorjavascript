@@ -1,0 +1,369 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+function cambiarpagina(){
+
+var parrafo = document.getElementById("codigo").value;
+document.getElementById("texto").innerHTML = parrafo;
+}
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Ancho y alto: redimensionar elementos</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En nuestro documento web podemos modificar las medidas de im&aacute;genes, margenes y celdas, utilizando las etiquetas &lt;height&gt; para fijar 
+la altura y &lt;width&gt; para determinar la anchura.</p>
+<p>Estos atributos se han de introducir dentro de las etiquetas correspondientes a imagenes o celdas.</p>
+<p>Aunque hayamos fijado las dimensiones de una celda, las im&aacute;genes, si lo necesitan, har&aacute;n que se expandan en anchura y altura. 
+Por este motivo conviene redimensionar las im&aacute;genes para que se limiten a ocupar el espacio que les hayamos asignado. Los textos se expanden 
+solamente en vertical.</p>
+
+<p>En este ejemplo podemos modificar todo el contenido y la distribuci&oacute;n de los elementos de la tabla y sus dimensiones.</p> 
+
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;style type="text/css"&gt;<br>
+.texto1 {  <br>
+font-family: Georgia, "Times New Roman", serif;<br>
+font-size:32px;<br> 
+color: red; <br> 
+}<br>
+.texto2 {<br>
+font-family: Helvetica, Geneva, Arial, sans-serif;<br>
+font-size:12px;<br>
+color: green;  <br>
+}<br>
+.texto3{<br>
+font-family:Arial, Helvetica, sans-serif;<br>
+font-size:18px;<br>
+color:#08088A;<br>
+}<br>
+&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+<textarea rows="35" cols="55" onchange="cambiarpagina()" id ="codigo" class="texto3" />
+<table border = "1" width="500" bordercolor="green" bgcolor="orange" cellspacing="2" cellpadding="5">
+<tr>
+
+<td width="50" height ="50" bgcolor="Yellow" align="center">
+<img src="numero1.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="LightYellow" align="center">
+<img src="numero2.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="LemonChiffon" colspan="2" align="center">
+<img src="numero3.png"  width="50" height ="50">
+</td>
+</tr>
+<tr>
+<td width="50" height ="50" bgcolor="LightGoldenrodYellow" align="center">
+<img src="numero4.png"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="PapayaWhip" rowspan="2" align="center">
+<img src="numero5.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="Moccasin" align="center">
+<img src="numero6.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="PeachPuff" align="center">
+<img src="numero7.jpg"  width="50" height ="50">
+</td>
+</tr>
+<tr>
+<td width="50" height ="50" bgcolor="PaleGoldenrod" align="center">
+<img src="numero8.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="Khaki" align="center">
+<img src="numero9.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="YellowGreen" align="center">
+<img src="numero0.jpg"  width="50" height ="50">
+</td>
+</tr>
+<tr>
+<td width="50" height ="50" bgcolor="Gold">
+<p class="texto2" />La Vía</p>
+</td>
+<td width="50" height ="50" bgcolor="DarkKhaki">
+<p class="texto2" />Láctea</p>
+</td>
+<td width="50" height ="50" bgcolor="Olive">
+<p class="texto2" />es una galaxia</p>
+</td>
+<td width="50" height ="50" bgcolor="DarkOliveGreen">
+<p class="texto2" />espiral</p> 
+</td>
+</tr>
+</table>
+</textarea><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<p id = "texto">
+<table border = "1" width="500" bordercolor="green" bgcolor="orange" cellspacing="2" cellpadding="5">
+<tr>
+
+<td width="50" height ="50" bgcolor="Yellow" align="center">
+<img src="numero1.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="LightYellow" align="center">
+<img src="numero2.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="LemonChiffon" colspan="2" align="center">
+<img src="numero3.png"  width="50" height ="50">
+</td>
+</tr>
+<tr>
+<td width="50" height ="50" bgcolor="LightGoldenrodYellow" align="center">
+<img src="numero4.png"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="PapayaWhip" rowspan="2" align="center">
+<img src="numero5.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="Moccasin" align="center">
+<img src="numero6.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="PeachPuff" align="center">
+<img src="numero7.jpg"  width="50" height ="50">
+</td>
+</tr>
+<tr>
+<td width="50" height ="50" bgcolor="PaleGoldenrod" align="center">
+<img src="numero8.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="Khaki" align="center">
+<img src="numero9.jpg"  width="50" height ="50">
+</td>
+<td width="50" height ="50" bgcolor="YellowGreen" align="center">
+<img src="numero0.jpg"  width="50" height ="50">
+</td>
+</tr>
+<tr>
+<td width="50" height ="50" bgcolor="Gold">
+<p class="texto2" />La V&iacute;a</p>
+</td>
+<td width="50" height ="50" bgcolor="DarkKhaki">
+<p class="texto2" />L&aacute;ctea</p>
+</td>
+<td width="50" height ="50" bgcolor="Olive">
+<p class="texto2" />es una galaxia</p>
+</td>
+<td width="50" height ="50" bgcolor="DarkOliveGreen">
+<p class="texto2" />espiral</p> 
+</td>
+</tr>
+</table>
+
+</p>
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 11.- Copia el c&oacute;digo que has ido generando en la ventana de texto de la izquierda y crea un documento web con esa tabla con 
+todos sus elementos y dimensiones.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript14.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript16.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+</style>
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Efectos psicod&eacute;licos en un canvas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo se forman de forma autom&aacute;tica formas aleatorias con curvas de B&eacute;zier. Las formas, gruesos y colores cambian 
+continuamente gracias a las &oacute;rdenes setInterval(line, 150); que llaman a una funci&oacute;n a intervalos de tiempo regulares. Entre 
+par&eacute;ntesis se indica primero el nombre de la funci&oacute;n que se ha de ejecutar y, a continuaci&oacute;n, el tiempo de espera antes de hacerlo, 
+indicado en microsegundos.</p>
+
+<p>Haz todas las modificaciones que creas oportunas en el dibujo, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+
+&lt;p&gt;<br>
+&lt;font size="5" color="green" face="Sans-serif"&gt;<br>
+&lt;p&gt;Dibujando en un canvas&lt;/p&gt;<br>
+&lt;/font&gt;<br>
+&lt;/p&gt;<br>
+Estas cosas se pueden conseguir dibujando en un canvas.
+&lt;/p&gt;<br>
+&lt;canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+
+
+
+
+
+
+ var canvas = document.getElementById('canvas');<br>
+ var context = canvas.getContext('2d');<br>
+ var lastX = context.canvas.width * Math.random();<br>
+ var lastY = context.canvas.height * Math.random();<br>
+ var hue = 0;<br><br>
+
+ function line() {<br><br>
+
+   context.save();<br>
+   context.translate(context.canvas.width/2, context.canvas.height/2);<br>
+   context.scale(0.9, 0.9);<br>
+   context.translate(-context.canvas.width/2, -context.canvas.height/2);<br>
+   context.beginPath();<br>
+   context.lineWidth = 5 + Math.random() * 10;<br>
+   context.moveTo(lastX, lastY);<br>
+   lastX = context.canvas.width * Math.random();<br>
+   lastY = context.canvas.height * Math.random();<br>
+   context.bezierCurveTo(context.canvas.width * Math.random(),<br>
+   context.canvas.height * Math.random(),<br>
+   context.canvas.width * Math.random(),<br>
+   context.canvas.height * Math.random(),<br>
+   lastX, lastY);<br><br>
+ 
+   hue = hue + 10 * Math.random();<br>
+   context.strokeStyle = 'hsl(' + hue + ', 50%, 50%)';<br>
+   context.shadowColor = 'white';<br>
+   context.shadowBlur = 10;<br>
+   context.stroke();<br>
+   context.restore();<br><br>
+
+ }<br><br>
+
+ setInterval(line, 150);<br><br>
+ 
+ function blank() {<br><br>
+
+   context.fillStyle = 'rgba(0,0,0,0.1)';<br>
+   context.fillRect(0, 0, context.canvas.width, context.canvas.height);<br>
+ }<br><br>
+
+ setInterval(blank, 140);<br><br>
+
+&lt;/script&gt;<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Formas psicod&eacute;licas</p>
+</font>
+</p>
+Estas cosas se pueden conseguir dibujando en un canvas.
+<br><br>
+        
+<canvas id="canvasGlowing" width="500" height="500" class="playable-canvas" style="border:1px solid #000000;">
+</canvas>
+
+
+<script type="text/javascript">
+
+
+ var canvas = document.getElementById('canvasGlowing');
+ var context = canvas.getContext('2d');
+ var lastX = context.canvas.width * Math.random();
+ var lastY = context.canvas.height * Math.random();
+ var hue = 0;
+ function line() {
+   context.save();
+   context.translate(context.canvas.width/2, context.canvas.height/2);
+   context.scale(0.9, 0.9);
+   context.translate(-context.canvas.width/2, -context.canvas.height/2);
+   context.beginPath();
+   context.lineWidth = 5 + Math.random() * 10;
+   context.moveTo(lastX, lastY);
+   lastX = context.canvas.width * Math.random();
+   lastY = context.canvas.height * Math.random();
+   context.bezierCurveTo(context.canvas.width * Math.random(),
+                         context.canvas.height * Math.random(),
+                         context.canvas.width * Math.random(),
+                         context.canvas.height * Math.random(),
+                         lastX, lastY);
+ 
+   hue = hue + 10 * Math.random();
+   context.strokeStyle = 'hsl(' + hue + ', 50%, 50%)';
+   context.shadowColor = 'white';
+   context.shadowBlur = 10;
+   context.stroke();
+   context.restore();
+ }
+ setInterval(line, 150);
+ 
+ function blank() {
+   context.fillStyle = 'rgba(0,0,0,0.1)';
+   context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+ }
+ setInterval(blank, 140);
+</script>
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 33.- Modifica esta animaci&oacute;n creada sobre un canvas. Puedes copiar todo el c&oacute;digo y probarlo en 
+<a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina.</p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript37.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript39.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.playable-code {
+  background-color: #F4F7F8;
+  border: none;
+  border-left: 6px solid  #558ABB;
+  border-width: medium medium medium 6px;
+  color: #4D4E53;
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px 0px;
+}
+
+canvas {
+border : 1px gray solid; 
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function funcioncargar(){
+
+var parrafo3 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+document.getElementById("contenedor").innerHTML = parrafo1;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+
+<body onload="funcioncargar()">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Girando una imagen sobre si misma</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este ejemplo dentro del canvas se mueven tres engranajes de forma coordinada. Para empezar podemos modificar las dimensiones de 
+este canvas.</p>
+<p>A continuaci&oacute;n, podemos escoger otras imagenes para hacerlas girar. Tambi&eacute;n podemos modificar las coordenadas de las im&aacute;genes y 
+la velocidad a la que giran con la orden rotarimagen(primeraimagen,100,100,contador/1);. Si a contador le quitamos o le a&ntilde;adimos el 
+signo menos conseguimos cambiar el sentido de giro. Podemos modificar individualmente la velocidad de giro de una imagen cambiando 
+el uno que divide a contador por otro valor. Tambien podemos cambiar la velocidad de giro modificando el valor de setInterval(loop, 10);. </p>
+<p>Haz todas las modificaciones que creas oportunas en la animaci&oacute;n, para familiarizarte con el c&oacute;digo.</p>
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+
+
+
+
+
+
+
+
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;p&gt;<br>
+
+<textarea rows="10" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Girando im&aacute;genes</p>
+</font>
+</p>
+Puedes modificar el c&oacute;digo del canvas y ver como queda la animaci&oacute;n al hacer clic fuera del cuadro de texto.
+
+</textarea><br>
+&lt;/p&gt;<br>
+&lt;canvas id="canvas" width="<textarea rows="1" cols="4" onchange="cambiaranchuracanvas()" id ="anchocanvas" class="texto3" />500</textarea>" height="<textarea rows="1" cols="4" onchange="cambiaralturacanvas()" id ="altocanvas" class="texto3" />500</textarea>" style="border:1px solid #000000;"&gt;<br>
+&lt;/canvas&gt;<br>
+
+
+&lt;script type="text/javascript"&gt;<br><br>
+
+
+
+	
+	var contador = 0;<br>
+	primeraimagen = new Image();<br>
+	primeraimagen.src = '<textarea rows="1" cols="30" onchange="cambiarimagen1()" id ="imagenuno" class="texto3" />engranaje1.png</textarea>'; <br>
+        segundaimagen = new Image();<br>
+        segundaimagen.src = '<textarea rows="1" cols="30" onchange="cambiarimagen2()" id ="imagendos" class="texto3" />engranaje2.png</textarea>'; <br>
+        terceraimagen = new Image();<br>
+        terceraimagen.src = '<textarea rows="1" cols="30" onchange="cambiarimagen3()" id ="imagentres" class="texto3" />engranaje1.png</textarea>'; <br>
+	
+	radian = Math.PI/180; <br>
+
+
+	var canvas = document.getElementById("canvas");<br>
+	var context = canvas.getContext('2d'); <br>
+        context.fillStyle="#FF0000";<br>
+        context.fillRect(0, 0, canvas.width, canvas.height);<br><br>
+
+
+	setInterval(loop, 
+	<textarea rows="1" cols="4" onchange="cambiarvelocidad()" id ="velocidad" class="texto3" />10</textarea>); <br><br>	
+
+
+	function loop() { <br><br>
+
+		context.clearRect(0,0,canvas.width, canvas.height); <br>
+        	context.fillStyle="<textarea rows="1" cols="9" onchange="cambiarcolorfondo()" id ="fondocolor" class="texto3" />#FF0000</textarea>";<br>
+                context.fillRect(0, 0, canvas.width, canvas.height);<br>
+                context.strokeRect(0, 0, canvas.width, canvas.height);
+		rotarimagen(primeraimagen,
+		<textarea rows="1" cols="4" onchange="cambiarimagen1x()" id ="imagenunox" class="texto3" />100</textarea>,<textarea rows="1" cols="4" onchange="cambiarimagen1y()" id ="imagenunoy" class="texto3" />100</textarea>,
+		<textarea rows="1" cols="8" onchange="cambiartextocontador1()" id ="texto1contador" class="texto3" />contador</textarea>/<textarea rows="1" cols="2" onchange="cambiartextoreduccion1()" id ="reduc1" class="texto3" />1</textarea>);<br>
+		rotarimagen(segundaimagen,
+		<textarea rows="1" cols="4" onchange="cambiarimagen2x()" id ="imagendosx" class="texto3" />185</textarea>,<textarea rows="1" cols="4" onchange="cambiarimagen2y()" id ="imagendosy" class="texto3" />185</textarea>,
+		<textarea rows="1" cols="8" onchange="cambiartextocontador2()" id ="texto2contador" class="texto3" />-contador</textarea>/<textarea rows="1" cols="2" onchange="cambiartextoreduccion2()" id ="reduc2" class="texto3" />1</textarea>);<br>
+		rotarimagen(terceraimagen,
+		<textarea rows="1" cols="4" onchange="cambiarimagen3x()" id ="imagentresx" class="texto3" />295</textarea>,<textarea rows="1" cols="4" onchange="cambiarimagen3y()" id ="imagentresy" class="texto3" />137</textarea>,
+		<textarea rows="1" cols="8" onchange="cambiartextocontador3()" id ="texto3contador" class="texto3" />contador</textarea>/<textarea rows="1" cols="2" onchange="cambiartextoreduccion3()" id ="reduc3" class="texto3" />1</textarea>);<br>
+		contador+=2; <br><br>
+
+	}<br><br>
+	
+	
+	function rotarimagen(imagen, x, y, angulo) { <br><br>
+
+		
+		context.save(); <br>
+
+		
+		context.translate(x, y);<br>
+
+		
+		context.rotate(angulo * radian);<br>
+
+		
+		context.drawImage(imagen, -(imagen.width/2), -(imagen.height/2));<br>
+
+		
+		context.restore(); <br><br>
+	}<br><br>
+
+&lt;/script&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+
+
+<p id="contenedor">
+</p>
+
+<p id = "canvasaqui">  </p>
+
+
+<p id="prueba"></p>
+
+<script>
+
+
+
+
+
+	window.addEventListener("load", init); 
+	
+
+	var imagen1 = 'engranaje1.png';
+	var imagen2 = 'engranaje2.png';
+	var imagen3 = 'engranaje1.png';
+	var contador11;
+	var tiempo = 10;
+	var primeraimagenx = 100; 
+	var primeraimageny = 100;
+	var segundaimagenx = 185; 
+	var segundaimageny = 185;
+	var terceraimagenx = 295; 
+	var terceraimageny = 137;
+	var reduccion1 = 1;
+	var reduccion2 = 1;
+	var reduccion3 = 1;
+	var textocontador1 = "contador";
+	var textocontador2 = "-contador";
+	var textocontador3 = "contador";
+	var anchuracanvas = 500;
+	var alturacanvas = 500;
+	var colorfondo = "#FF0000";
+	var contador = 0;
+	primeraimagen = new Image();
+	primeraimagen.src = imagen1;
+	//primeraimagen.width = 30;
+	//primeraimagen.height = 30;
+        segundaimagen = new Image();
+        segundaimagen.src = imagen2;
+        terceraimagen = new Image();
+        terceraimagen.src = imagen3;
+	radian = Math.PI/180; 
+
+
+	var micanvas = document.createElement('canvas');
+	micanvas.id = 'canvas1';
+	micanvas.width = anchuracanvas; 
+	micanvas.height = alturacanvas; 
+	var context = micanvas.getContext('2d'); 
+
+
+	document.body.appendChild(micanvas); 
+	document.getElementById('canvasaqui').appendChild(micanvas);
+        context.fillStyle="#FF0000";
+        context.fillRect(0, 0, micanvas.width, micanvas.height);
+        context.fillRect(0, 0, micanvas.width, micanvas.height);
+
+
+	function cambiarvelocidad(){
+	tiempo = document.getElementById("velocidad").value;
+	clearInterval(contador11);
+	init();
+	}
+
+	function cambiarimagen1(){
+	imagen1 = document.getElementById("imagenuno").value;
+	primeraimagen.src = imagen1;
+	}
+
+	function cambiarimagen2(){
+	imagen2 = document.getElementById("imagendos").value;
+	segundaimagen.src = imagen2;
+	}
+
+	function cambiarimagen3(){
+	imagen3 = document.getElementById("imagentres").value;
+	terceraimagen.src = imagen3;
+	}
+
+
+	function cambiarimagen1x(){
+	primeraimagenx = document.getElementById("imagenunox").value;
+	}
+
+	function cambiarimagen1y(){
+	primeraimageny = document.getElementById("imagenunoy").value;
+	}
+
+	function cambiarimagen2x(){
+	segundaimagenx = document.getElementById("imagendosx").value;
+	}
+
+	function cambiarimagen2y(){
+	segundaimageny = document.getElementById("imagendosy").value;
+	}
+
+	function cambiarimagen3x(){
+	terceraimagenx = document.getElementById("imagentresx").value;
+	}
+
+	function cambiarimagen3y(){
+	terceraimageny = document.getElementById("imagentresy").value;
+	}
+
+	function cambiartextocontador1(){
+	textocontador1 = document.getElementById("texto1contador").value;
+	}
+
+	function cambiartextocontador2(){
+	textocontador2 = document.getElementById("texto2contador").value;
+	}
+
+	function cambiartextocontador3(){
+	textocontador3 = document.getElementById("texto3contador").value;
+	}
+
+	function cambiartextoreduccion1(){
+	reduccion1 = document.getElementById("reduc1").value;
+	}
+
+	function cambiartextoreduccion2(){
+	reduccion2 = document.getElementById("reduc2").value;
+	}
+
+	function cambiartextoreduccion3(){
+	reduccion3 = document.getElementById("reduc3").value;
+	}
+
+
+	function cambiaranchuracanvas(){
+	anchuracanvas = document.getElementById("anchocanvas").value;
+	micanvas.width = anchuracanvas; 
+	}
+
+	function cambiaralturacanvas(){
+	alturacanvas = document.getElementById("altocanvas").value;
+	micanvas.height = alturacanvas; 
+	}
+
+	function cambiarcolorfondo(){
+	colorfondo = document.getElementById("fondocolor").value;
+	}
+
+
+
+	function init(){
+	contador11 = setInterval(loop, tiempo); 	
+	}
+
+
+
+	function loop() { 
+		context.clearRect(0,0,micanvas.width, micanvas.height); 
+        	context.fillStyle=colorfondo;
+                context.fillRect(0, 0, micanvas.width, micanvas.height);
+                context.strokeRect(0, 0, micanvas.width, micanvas.height);
+
+		if(textocontador1=="contador"){
+		rotarimagen(primeraimagen,primeraimagenx,primeraimageny,contador/reduccion1); 
+		}
+
+		if(textocontador1=="-contador"){
+		rotarimagen(primeraimagen,primeraimagenx,primeraimageny,-contador/reduccion1); 
+		}
+
+		if(textocontador2=="contador"){
+		rotarimagen(segundaimagen,segundaimagenx,segundaimageny,contador/reduccion2); 
+		}
+
+		if(textocontador2=="-contador"){
+		rotarimagen(segundaimagen,segundaimagenx,segundaimageny,-contador/reduccion2); 
+		}
+
+
+		if(textocontador3=="contador"){
+		rotarimagen(terceraimagen,terceraimagenx,terceraimageny,contador/reduccion3); 
+		}
+
+		if(textocontador3=="-contador"){
+		rotarimagen(terceraimagen,terceraimagenx,terceraimageny,-contador/reduccion3); 
+		}
+
+ 
+		contador+=2; 
+	}
+	
+	
+	function rotarimagen(imagen, x, y, angulo) { 
+
+		// save the current co-ordinate system 
+		// before we screw with it
+		context.save(); 
+
+		// move to the middle of where we want to draw our image
+		context.translate(x, y);
+
+		// rotate around that point, converting our 
+		// angle from degrees to radians 
+		context.rotate(angulo * radian);
+
+		// draw it up and to the left by half the width
+		// and height of the image 
+		context.drawImage(imagen, -(imagen.width/2), -(imagen.height/2));
+
+		// and restore the co-ords to how they were when we began
+		context.restore(); 
+	}
+	
+
+	</script>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+
+
+
+
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 35.- Dise&ntilde;a un documento web con una animaci&oacute;n que tenga im&aacute;genes que giran, creada sobre un canvas. Puedes copiar todo 
+el c&oacute;digo y probarlo en <a href="simujavascriptcompleto.html" target = "blanck">esta p&aacute;gina</a>. Has de quitar los saltos de linea que 
+generan las ventanas de texto en las &oacute;rdenes de asignaci&oacute;n de imagen primeraimagen.src = "engranaje1.png"; y 
+context.fillStyle="#FF0000";, porque sin&oacute; no funciona. </p>
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript39.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript41.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

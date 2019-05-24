@@ -1,0 +1,438 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+
+
+<style type="text/css">
+  
+.texto1 {  
+font-family: Georgia, "Times New Roman", serif;
+font-size:32px;
+color: red;  
+}
+    
+.texto2 {
+font-family: Helvetica, Geneva, Arial, sans-serif;
+font-size:12px;
+color: green;  
+}
+
+.texto3{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+vertical-align:bottom;
+}
+
+.texto4{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#08088A;
+text-align: right;
+vertical-align:bottom;
+}
+
+.texto5{
+font-family:Times New Roman;
+font-size:16px;
+color:#000000;
+text-align: left;
+vertical-align:bottom;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+function cambiarpagina1(){
+
+var parrafo1 = document.getElementById("codigo1").value;
+
+document.getElementById("texto1").innerHTML = parrafo1;
+
+}
+
+
+function cambiarpagina2(){
+
+var parrafo2 = document.getElementById("codigo2").value;
+
+document.getElementById("texto2").innerHTML = parrafo2;
+
+}
+
+function cambiarpagina3(){
+
+var parrafo3 = document.getElementById("codigo3").value;
+
+document.getElementById("texto3").innerHTML = parrafo3;
+
+}
+
+
+function cambiarpagina4(){
+
+var parrafo4 = document.getElementById("codigo4").value;
+
+document.getElementById("texto4").innerHTML = parrafo4;
+
+}
+
+
+
+function cambiarpagina5(){
+
+var parrafo5 = document.getElementById("codigo5").value;
+
+document.getElementById("texto5").innerHTML = parrafo5;
+
+}
+
+function cambiarpagina6(){
+
+var parrafo6 = document.getElementById("codigo6").value;
+
+document.getElementById("texto6").innerHTML = parrafo6;
+
+}
+
+
+function cambiarpagina7(){
+
+var parrafo7 = document.getElementById("codigo7").value;
+
+document.getElementById("texto7").innerHTML = parrafo7;
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body>
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Hojas de estilo CSS</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Las hojas de estilo CSS son conjuntos de instrucciones que se asocian a un texto y le proporcionan formato. 
+Estas hojas de estilo se sit&uacute;an en la cabecera de la p&aacute;gina web para su uso posterior. El c&oacute;digo de estas hojas de estilo se introduce 
+entre las etiquetas &lt;style&gt; y &lt;/style&gt;.</p>
+<p>En este ejemplo tenemos tres hojas de estilo texto1, texto2, texto3 texto4 y texto5.</p>
+<p>Para asignar una hoja de estilo a un p&aacute;rrafo hemos de introducir este atributo dentro de la etiqueta del mismo de esta forma 
+&lt;p class="texto3" /&gt;.</p>
+<p>Tambi&eacute;n se usan hojas de estilos para dar formato a las tablas, las im&aacute;genes o todo el cuerpo del documento web.</p>
+
+<p>En este ejemplo podemos modificar el texto utilizando, como hemos dicho, las hojas de estilo CSS, que se pueden incluir en una etiqueta 
+&lt;p&gt; o &lt;blockquote&gt;.</p> 
+
+
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;style type="text/css"&gt;<br>
+.texto1 {  <br>
+font-family: Georgia, "Times New Roman", serif;<br>
+font-size:32px;<br> 
+color: red; <br> 
+}<br>
+.texto2 {<br>
+font-family: Helvetica, Geneva, Arial, sans-serif;<br>
+font-size:12px;<br>
+color: green;  <br>
+}<br>
+.texto3{<br>
+font-family:Arial, Helvetica, sans-serif;<br>
+font-size:18px;<br>
+color:#08088A;<br>
+}<br>
+.texto4{<br>
+font-family:Arial, Helvetica, sans-serif;<br>
+font-size:18px;<br>
+color:#08088A;<br>
+text-align: right;<br>
+}<br>
+.texto5{<br>
+font-family:Times New Roman;<br>
+font-size:16px;<br>
+color:#000000;<br>
+text-align: left;<br>
+}
+
+&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;blockquote&gt;<br>
+&lt;p&gt;<br>
+<textarea rows="8" cols="55" onchange="cambiarpagina1()" id ="codigo1" class="texto3" />
+<br>
+<font size="7" color="blue" face="Sans-serif">
+La V&iacute;a l&aacute;ctea
+</font>
+
+</textarea><br>
+&lt;/p&gt;<br>
+
+&lt;p&gt;<br>
+<textarea rows="5" cols="55" onchange="cambiarpagina2()" id ="codigo2" class="texto3" />
+La V&iacute;a L&aacute;ctea es una galaxia espiral en donde se encuentra el Sistema Solar.
+</textarea><br>
+&lt;/p&gt;<br>
+
+&lt;p&gt;<br>
+&lt;blockquote  align="right"&gt;<br>
+<textarea rows="7" cols="55" onchange="cambiarpagina3()" id ="codigo3" class="texto3" />
+<i>El nombre <b>V&iacute;a L&aacute;ctea</b> proviene de la mitolog&iacute;a griega y en lat&iacute;n significa camino de leche.</i>
+</textarea><br>
+&lt;/blockquote&gt;<br>
+&lt;/p&gt;<br>
+
+&lt;p&gt;<br>
+<textarea rows="5" cols="55" onchange="cambiarpagina4()" id ="codigo4" class="texto3" />
+Se calcula que contiene entre 200.000 millones y 400.000 millones de estrellas.
+</textarea><br>
+&lt;/p&gt;<br>
+
+<textarea rows="7" cols="55" onchange="cambiarpagina5()" id ="codigo5" class="texto3" />
+<p class="texto5" />
+La distancia desde el Sol hasta el centro de la galaxia es de alrededor de 27.700 a&ntilde;os luz (8.500 pc), es decir, el 55 % del radio total gal&aacute;ctico. 
+</p>
+</textarea><br>
+
+&lt;p&gt;<br>
+<textarea rows="10" cols="55" onchange="cambiarpagina6()" id ="codigo6" class="texto3" />
+La V&iacute;a L&aacute;ctea forma parte de un conjunto de unas cuarenta galaxias llamado Grupo Local, y es la segunda m&aacute;s grande y brillante tras la Galaxia de Andr&oacute;meda (aunque puede ser la m&aacute;s masiva, al mostrar un estudio reciente que nuestra galaxia es un 50 % m&aacute;s masiva de lo que se cre&iacute;a anteriormente).
+</textarea><br>
+&lt;/p&gt;<br>
+
+&lt;p class="texto2" /&gt;<br>
+<textarea rows="10" cols="55" onchange="cambiarpagina7()" id ="codigo7" class="texto3" />
+<i>La mitolog&iacute;a griega explicaba que se trata de leche derramada del pecho de la diosa Hera (Juno para los romanos). Rubens representa la leyenda en su obra El nacimiento de la <b>V&iacute;a L&aacute;ctea. </b></i>
+
+</textarea><br>
+
+&lt;/p&gt;<br>
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<blockquote>
+<p id = "texto1">
+<br>
+
+<font size="7" color="blue" face="Sans-serif">
+La V&iacute;a l&aacute;ctea
+</font>
+<br> 
+</p>
+<p id = "texto2">
+La V&iacute;a L&aacute;ctea es una galaxia espiral en donde se encuentra el Sistema Solar.
+</p>
+<blockquote  align="right">
+<p id = "texto3">
+
+<i>El nombre <b>V&iacute;a L&aacute;ctea</b> proviene de la mitolog&iacute;a griega y en lat&iacute;n significa camino de leche.</i>
+</blockquote>
+</p>
+
+<p id = "texto4">
+Se calcula que contiene entre 200.000 millones y 400.000 millones de estrellas.
+</p>
+<p id = "texto5" class="texto5" />
+La distancia desde el Sol hasta el centro de la galaxia es de alrededor de 27.700 a&ntilte;os luz (8.500 pc), es decir, 
+el 55 % del radio total gal&aacute;ctico. 
+</p>
+<p id = "texto6">
+La V&iacute;a L&aacute;ctea forma parte de un conjunto de unas cuarenta galaxias llamado Grupo Local, y es la segunda m&aacute;s grande y 
+brillante tras la Galaxia de Andr&oacute;meda (aunque puede ser la m&aacute;s masiva, al mostrar un estudio reciente que nuestra galaxia 
+es un 50 % m&aacute;s masiva de lo que se cre&iacute;a anteriormente).
+</p>
+<p id = "texto7" class="texto2" />
+<i>La mitolog&iacute;a griega explicaba que se trata de leche derramada del pecho de la diosa Hera (Juno para los romanos). Rubens 
+representa la leyenda en su obra El nacimiento de la <b>V&iacute;a L&aacute;ctea. </b></i>
+
+</p>
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%">
+
+
+</td>
+</tr>
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+<font size="4" face="arial" color="#4B610B">
+<p>Ejercicio 9.- Copia el c&oacute;digo que has ido generando en la ventana de texto de la izquierda y crea un documento web con esos textos 
+modificados con difertentes hojas de estilo CSS.</p>
+
+</font>
+<br>
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript12.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript14.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>
