@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>primera p&aacute;gina</title>
+<script type="text/javascript">
+
+var valor = 100;
+
+function funcionaumentar(){
+valor = valor +  10;
+  document.getElementById("marcador").innerHTML=valor;
+}
+
+function funciondisminuir(){
+valor = valor -  10;
+document.getElementById("marcador").innerHTML=valor;
+}
+
+</script>
+</head>
+<body>
+<p>
+
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Un bot&oacute;n con un objeto input de imagen</p>
+</font>
+</p>
+  Al hacer clic sobre estos botones llamamos a las funciones "funcionaumentar" y "funciondisminuir" que modifican la variable "valor" y la muestran en el p&aacute;rrafo con el identificador "marcador".
+<p>
+<input type=image src="suma.png" width="50" height="50" onclick="funcionaumentar();" border ="2">
+
+<input type=image src="resta.jpg" width="50" height="50"  onclick="funciondisminuir();" border ="2">
+</p>
+
+
+
+</p>
+<p id = "marcador">
+</p>
+</body>
+</html>

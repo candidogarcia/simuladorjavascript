@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>primera página</title>
+</head>
+<body>
+<p>
+
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Colocando una imagen con el ratón</p>
+</font>
+</p>
+Puedes modificar el código del canvas y ver como queda la animación al hacer clic fuera del cuadro de texto.
+
+
+
+</p>
+  
+ <canvas id="micanvas" width="500" height="500" style="border:1px solid #000000;">
+  </canvas>
+  
+  
+<script type="text/javascript">
+
+var canvas = document.createElement('micanvas');
+
+  var trazo = micanvas.getContext('2d'); 
+
+var imagen1 = document.createElement('img');
+imagen1.src = 'colibri.gif';
+var imagen2 = document.createElement('img');
+imagen2.src = 'paisaje.jpg';
+imagen1.onload = function () { 
+trazo.drawImage(imagen2, 0, 0, 500, 500); 
+trazo.drawImage(imagen1, 0, 0, 100, 100); 
+}
+
+var raton = false;
+
+trazo.canvas.addEventListener('mousedown', function () { 
+raton = true; 
+}, false);
+
+trazo.canvas.addEventListener('mouseup', function () { 
+raton = false; 
+}, false);
+
+trazo.canvas.addEventListener('mousemove', function (event) {
+
+if (raton){
+
+var ClientRect = micanvas.getBoundingClientRect();
+x = Math.round(event.clientX - ClientRect.left);
+y = Math.round(event.clientY - ClientRect.top);
+limpiar();
+trazo.drawImage(imagen1, x - 10, y - 10, 100, 100);
+}
+
+}, false);
+
+function limpiar(){
+trazo.clearRect(0, 0, micanvas.width, micanvas.height);
+trazo.drawImage(imagen2, 0, 0, 500, 500); 
+}
+</script>
+
+</body>
+</html>
+

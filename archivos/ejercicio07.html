@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>primera p&aacute;gina</title>
+<script type="text/javascript">
+
+var numeroprimero = "";
+
+var numerosegundo = "";
+
+var numerofinal = 0;
+
+var operacion = 0;
+
+var ordennumero = 0;
+
+function introducirnumero(numero){
+
+if(ordennumero==0){
+numeroprimero = numeroprimero + numero;
+document.getElementById("primernumero").innerHTML = numeroprimero;
+}
+
+if(ordennumero==1){
+numerosegundo = numerosegundo + numero;
+document.getElementById("segundonumero").innerHTML = numerosegundo;
+}
+
+}
+
+function operar(indice){
+
+if(indice==1){
+operacion = 1;
+}
+
+if(indice==2){
+operacion = 2;
+}
+
+if(indice==3){
+operacion = 3;
+}
+
+if(indice==4){
+operacion = 4;
+}
+
+ordennumero = 1;
+
+}
+
+function calcular(){
+
+var numerouno = parseInt(numeroprimero);
+var numerodos = parseInt(numerosegundo);
+
+if(operacion==1){
+resultado = numerouno + numerodos;
+}
+
+if(operacion==2){
+resultado = numerouno - numerodos;
+}
+
+if(operacion==3){
+resultado = numerouno * numerodos;
+}
+
+if(operacion==4){
+resultado = numerouno / numerodos;
+}
+
+document.getElementById("resultados").innerHTML = resultado;
+
+numeroprimero = "";
+
+numerosegundo = "";
+
+ordennumero = 0;
+
+}
+
+</script>
+</head>
+<body>
+<p>
+
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Funciones condicicionales</p>
+</font>
+</p>
+Primero introduce un n&uacute;mero, despu&eacute;s haz clic en el signo de operaci&oacute;n, a continuaci&oacute;n introduce otro n&uacute;mero y, para acabar, haz clic sobre el igual. Las tres funciones, "introducirnumero", "operar" y "calcular" utilizan funciones condicionales (if).
+<p>
+<input type=image src="numero1.jpg" width="50" height="50" onclick="introducirnumero(1);" border ="2">
+<input type=image src="numero2.jpg" width="50" height="50" onclick="introducirnumero(2);" border ="2">
+<input type=image src="numero3.png" width="50" height="50" onclick="introducirnumero(3);" border ="2">
+<input type=image src="numero0.jpg" width="50" height="50" onclick="introducirnumero(0);" border ="2">
+<input type=image src="multiplicar.png" width="50" height="50" onclick="operar(3);" border ="2">
+<br>
+<input type=image src="numero4.png" width="50" height="50" onclick="introducirnumero(4);" border ="2">
+<input type=image src="numero5.jpg" width="50" height="50" onclick="introducirnumero(5);" border ="2">
+<input type=image src="numero6.jpg" width="50" height="50" onclick="introducirnumero(6);" border ="2">
+<input type=image src="suma.png" width="50" height="50" onclick="operar(1);" border ="2">
+<input type=image src="dividir.png" width="50" height="50" onclick="operar(4);" border ="2">
+<br>
+<input type=image src="numero7.jpg" width="50" height="50" onclick="introducirnumero(7);" border ="2">
+<input type=image src="numero8.jpg" width="50" height="50" onclick="introducirnumero(8);" border ="2">
+<input type=image src="numero9.jpg" width="50" height="50" onclick="introducirnumero(9);" border ="2">
+<input type=image src="resta.jpg" width="50" height="50" onclick="operar(2);" border ="2">
+<input type=image src="igual.png" width="50" height="50" onclick="calcular();" border ="2"> 
+</p>
+Primer n&uacute;mero
+<p id ="primernumero">
+0
+</p>
+Segundo n&uacute;mero
+<p id ="segundonumero">
+0
+</p>
+Resultado
+<p id ="resultados">
+0
+</p>
+
+
+</p>
+</body>
+</html>

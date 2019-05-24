@@ -1,0 +1,414 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+<style>
+.textBox{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:18px;
+   color:#08088A;
+   vertical-align:bottom;
+}
+</style>
+
+<script type="text/javascript">
+              
+var indicefilas = 4;
+
+		function iniciartabla(tableID){
+
+
+		var tabla = document.getElementById(tableID);
+
+		var row1 = tabla.insertRow(0);
+
+               	var cell1 = row1.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row1.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row1.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row1.insertCell(1);
+		cell4.innerText = "Celda";
+
+		var row2 = tabla.insertRow(1);
+
+               	var cell1 = row2.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row2.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row2.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row2.insertCell(1);
+		cell4.innerText = "Celda";
+
+		var row3 = tabla.insertRow(2);
+
+               	var cell1 = row3.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row3.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row3.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row3.insertCell(1);
+		cell4.innerText = "Celda";
+
+		var row4 = tabla.insertRow(3);
+
+               	var cell1 = row4.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row4.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row4.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row4.insertCell(1);
+		cell4.innerText = "Celda";
+
+		}
+
+
+
+              
+function cambiartabla1(tableID){
+
+
+var fila2 = document.getElementById("segundafila").value;
+
+
+var tabla = document.getElementById(tableID);
+
+
+		if(fila2=="nada"){
+
+		tabla.deleteRow(0);				
+
+		}
+
+
+		if(fila2=="fila"){
+		
+		var tabla = document.getElementById(tableID);
+
+		var row1 = tabla.insertRow(0);
+
+               	var cell1 = row1.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row1.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row1.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row1.insertCell(1);
+		cell4.innerText = "Celda";
+
+		}
+
+		}
+
+
+	
+function cambiartabla2(tableID){
+
+
+var fila3 = document.getElementById("tercerafila").value;
+
+
+var tabla = document.getElementById(tableID);
+
+
+		if(fila3=="nada"){
+
+		tabla.deleteRow(0);		
+
+		}
+
+
+		if(fila3=="fila"){
+		
+		var tabla = document.getElementById(tableID);
+
+		var row1 = tabla.insertRow(0);
+
+               	var cell1 = row1.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row1.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row1.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row1.insertCell(1);
+		cell4.innerText = "Celda";
+	
+		}
+
+		}	
+
+
+function cambiartabla3(tableID){
+
+
+var fila4 = document.getElementById("cuartafila").value;
+
+
+var tabla = document.getElementById(tableID);
+
+
+		if(fila4=="nada"){
+
+		tabla.deleteRow(0);		
+
+		}
+
+
+		if(fila4=="fila"){
+		
+		var tabla = document.getElementById(tableID);
+
+		var row1 = tabla.insertRow(0);
+
+               	var cell1 = row1.insertCell(0);
+		cell1.innerText = "Celda";
+               	var cell2 = row1.insertCell(1);
+		cell2.innerText = "Celda";
+               	var cell3 = row1.insertCell(0);
+		cell3.innerText = "Celda";
+               	var cell4 = row1.insertCell(1);
+		cell4.innerText = "Celda";
+	
+		}
+
+		}
+
+
+
+
+</script>
+
+
+</head>
+
+
+<body onload="iniciartabla('dataTable')">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Filas y columnas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>En este otro ejemplo partimos de una tabla de cuatro filas y cuatro columnas.</p>
+<p>Hemos de recordar que para insertar tablas se utilizan las etiquetas &lt;table&gt; y &lt;/table&gt;. Las etiquetas &lt;tr&gt; y 
+&lt;/tr&gt; delimitan una fila de la tabla. Por &uacute;ltimo, las etiquetas &lt;td&gt; y &lt;/td&gt; sirven para definir una celda dentro de una 
+fila.</p>
+<p>F&iacute;jate, a continuaci&oacute;n, en el c&oacute;digo html utilizado para insertar la tabla de cuatro filas y cuatro columnas.</p> <p>Modificando 
+la cantidad de bloques de c&oacute;digo &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt; 
+podemos modificar la cantidad de filas de la tabla.</p>
+<p>Eliminando o volviendo a poner estos bloques de c&oacute;digo, mediante los desplegables, podemos conseguir que haya desde una hasta 
+cuatro filas.</p>
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+
+&lt;table&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+&lt;/td&gt;<br>
+&lt;td&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+
+    <select id="segundafila" form="formulario" onchange="cambiartabla1('dataTable')" class="textBox" />
+    <option value="fila">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</option>
+    <option value="nada"></option>
+    </select>
+    <br>
+
+    <select id="tercerafila" form="formulario" onchange="cambiartabla2('dataTable')" class="textBox" />
+    <option value="fila">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</option>
+    <option value="nada"></option>
+    </select>
+    <br>
+
+    <select id="cuartafila" form="formulario" onchange="cambiartabla3('dataTable')" class="textBox" />
+    <option value="fila">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</option>
+    <option value="nada"></option>
+    </select>
+    <br>
+
+&lt;/table&gt;<br>
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;
+
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<TABLE id="dataTable" width="350px" border="1">
+<TR>
+
+
+
+</TR>
+        
+
+     </TABLE>
+
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript03.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript05.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

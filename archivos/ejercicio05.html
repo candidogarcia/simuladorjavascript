@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>primera p&aacute;gina</title>
+<script type="text/javascript">
+
+var ancho = 100;
+
+var alto = 100;
+
+function funcionancho(){
+ancho = ancho +  10;
+funcionfoto();
+}
+
+function funcionalto(){
+alto = alto +  10;
+funcionfoto();
+}
+
+function funcionfoto(){
+var imagen = document.getElementById("fotografia");
+imagen.src= "gato.jpg";
+imagen.width = ancho;
+imagen.height = alto;
+imagen.border = 1;
+}
+</script>
+</head>
+<body>
+<p>
+
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Uso de variables</p>
+</font>
+</p>
+  Las variables guardan informaci&oacute;n. En este caso las dos variables indican la altura y anchura de la imagen. Cada bot&oacute;n llama a una funci&oacute;n que modifica una de las dos variables. Desde las funciones anteriores se llama a la funci&oacute;n "funcionfoto".
+<p>
+<a href="#" onclick="funcionancho()"/>
+<img src="botonazul.jpg" width="100" height="100" border ="8"></a>
+<a href="#" onclick="funcionalto()"/>
+<img src="botonrojo.jpg" width="100" height="100" border ="8"></a>
+</p>
+<p>
+<img src="perro.jpg" id="fotografia" width="100" height="100" border ="8">
+</p>
+
+
+</p>
+</body>
+</html>

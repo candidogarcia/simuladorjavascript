@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>Simulador JavaScript</title>
+
+<style>
+.textBox{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:18px;
+   color:#08088A;
+   vertical-align:bottom;
+}
+</style>
+
+<script type="text/javascript">
+              
+              
+function cambiartabla(tableID){
+
+
+var celda2 = document.getElementById("segundacelda").value;
+
+var celda3 = document.getElementById("terceracelda").value;
+
+var celda4 = document.getElementById("cuartacelda").value;
+
+var indices = 1;
+
+
+
+
+		if(celda2=="celda"){
+
+		indices = indices + 1;		
+
+		}
+
+		if(celda3=="celda"){
+
+		indices = indices + 1;		
+
+		}
+
+		if(celda4=="celda"){
+
+		indices = indices + 1;		
+
+		}
+
+
+
+ 		var tabla = document.getElementById(tableID);
+
+                tabla.deleteRow(0);
+
+                var fila = tabla.insertRow();
+
+		for(var i=0; i<indices; i++) {
+
+		var indice = "fila" + i
+
+                var indice = fila.insertCell();
+
+		indice.innerText = "Celda";
+
+ 		
+
+		}
+
+
+
+
+}
+
+</script>
+
+
+</head>
+
+
+<body onload="cambiartabla('dataTable')">
+
+<table width="100%" BGCOLOR="#AACCEE">
+<tr>
+<td colspan=4 BGCOLOR="#1B72D5"><img src="logosimujava.png"></td>
+</tr>
+<tr>
+<tr>
+
+
+<tr>
+<td colspan=4 BGCOLOR="#0080FF">
+<blockquote>
+<font size="6" face="arial" color="white">
+<b>Elaboraci&oacute;n de tablas</b>
+</a>
+</td>
+</tr>
+<tr>
+<tr>
+
+
+
+<td colspan=4>
+
+
+
+
+
+
+
+<table width="100%" BGCOLOR="#AACCEE">
+
+<tr>
+<td width="2%"></td>
+<td width="96%">
+
+
+<font size="4" face="arial" color="#08088A">
+<br>
+<p>Para insertar tablas en un documento html se utilizan tres tipos de etiquetas. Las etiquetas &lt;table&gt; y &lt;/table&gt; se utilizan 
+para identificar toda la tabla. Las etiquetas &lt;tr&gt; y &lt;/tr&gt; delimitan una fila de la tabla. Por &uacute;ltimo, las etiquetas 
+&lt;td&gt; y &lt;/td&gt; sirven para definir una celda dentro de una fila.</p>
+<p>Determinando la cantidad de filas, y de celdas por cada fila, podemos hacer que la tabla tenga m&aacute;s o menos casillas.</p>
+
+<p>F&iacute;jate, a continuaci&oacute;n, en el c&oacute;digo html utilizado para insertar una tabla con una fila y cuatro celdas dentro de esa fila. Modificando 
+la cantidad de parejas de etiquetas &lt;td&gt; y &lt;/td&gt; podemos modificar la cantidad de celdas en la fila.</p>
+<p>Eliminando o volviendo a poner pares de etiquetas &lt;td&gt; &lt;/td&gt;, mediante los desplegables, podemos conseguir que haya desde una hasta 
+cuatro celdas.</p>
+<p>Si en nuestra p&aacute;gina web ponemos solamente el c&oacute;digo que aqu&iacute; aparece no ver&iacute;amos nada. En este c&oacute;digo falta el contenido de texto de la 
+celda, la anchura de la tabla y la indicaci&oacute;n de que se han de ver las lineas de la tabla. Si lo hemos simplificado es para ayudar a 
+comprender como es la estructura b&aacute;sica de una tabla.</p>
+
+<p>&nbsp;</p>
+</font>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#1B72D5" width="48%">
+<img src="logocodigo.png">
+
+</td>
+<td bgcolor="#1B72D5" width="48%" valign="top">
+<img src="logovista.png">
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td bgcolor="#FFFFFF" width="48%">
+
+
+
+<font size="4" face="arial" color="#08088A">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;primera p&aacute;gina&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+
+&lt;table&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<br>
+&lt;/td&gt;<br>
+
+    <select id="segundacelda" form="formulario" onchange="cambiartabla('dataTable')" class="textBox" />
+    <option value="celda">&lt;td&gt;&lt;/td&gt;</option>
+    <option value="nada"></option>
+    </select>
+    <br>
+
+    <select id="terceracelda" form="formulario" onchange="cambiartabla('dataTable')" class="textBox" />
+    <option value="celda">&lt;td&gt;&lt;/td&gt;</option>
+    <option value="nada"></option>
+    </select>
+    <br>
+
+    <select id="cuartacelda" form="formulario" onchange="cambiartabla('dataTable')" class="textBox" />
+    <option value="celda">&lt;td&gt;&lt;/td&gt;</option>
+    <option value="nada"></option>
+    </select>
+    <br>
+
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+
+
+
+
+&lt;/body&gt;<br>
+&lt;/html&gt;
+
+
+
+
+
+
+</td>
+<td bgcolor="#FFFFFF" width="48%" valign="top">
+
+<TABLE id="dataTable" width="350px" border="1">
+<TR>
+
+
+
+</TR>
+        
+
+     </TABLE>
+
+
+
+
+
+
+
+
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="96%" colspan=2>
+
+
+<font size="4" face="arial" color="#4B610B">
+<br>
+<p></p>
+</font>
+<br>
+</td>
+<td width="2%"></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td width="2%"></td>
+<td width="48%" align="right">
+<a href="simujavascriptindex.html">
+<img src="menu.png" width="65" high"=65"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="simujavascript02.html">
+<img src="flecha_izqda.png">
+</a>
+</td>
+<td width="48%">
+<a href="simujavascript04.html">
+<img src="flecha_dcha.png">
+</a>
+</td>
+<td width="2%"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

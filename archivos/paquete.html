@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>primera página</title>
+</head>
+<body>
+<p>
+
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Dibujando en un canvas</p>
+</font>
+</p>
+Puedes modificar el código del canvas y ver como queda el dibujo al hacer clic fuera del cuadro de texto.
+
+
+
+</p>
+<canvas id="canvas" width="500" height="500" style="border:1px solid #000000;">
+</canvas>
+<script type="text/javascript">
+
+var contador = 0;
+primeraimagen = new Image();
+primeraimagen.src = 'engranaje1.png'; 
+segundaimagen = new Image();
+segundaimagen.src = 'engranaje2.png'; 
+terceraimagen = new Image();
+terceraimagen.src = 'engranaje1.png'; 
+radian = Math.PI/180; 
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext('2d'); 
+context.fillStyle="#FF0000";
+context.fillRect(0, 0, canvas.width, canvas.height);
+
+setInterval(loop,  
+30
+); 
+
+function loop() { 
+
+context.clearRect(0,0,canvas.width, canvas.height); 
+context.fillStyle="#FF0000";
+context.fillRect(0, 0, canvas.width, canvas.height);
+rotarimagen(primeraimagen,  
+100
+,
+100
+,contador); 
+rotarimagen(segundaimagen,  
+185
+,
+185
+,-contador); 
+rotarimagen(terceraimagen,  
+295
+,
+137
+,contador); 
+contador+=1.8
+; 
+
+}
+
+function rotarimagen(imagen, x, y, angulo) { 
+
+context.save(); 
+context.translate(x, y);
+context.rotate(angulo * radian);
+context.drawImage(imagen, -(imagen.width/2), -(imagen.height/2));
+context.restore(); 
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>primera p&aacute;gina</title>
+</head>
+<body onkeydown="teclado(event)" onload="lienzo()">
+ 
+<p>
+<font size="5" color="green" face="Sans-serif">
+<p>Eventos de teclado</p>
+</font>
+</p>
+Al cargar la p&aacute;gina, cuando se presiona una tecla del teclado, se llama a la funci&oacute;n "teclado". Dependiendo del valor de esta tecla se modifican en un sentido o en otro las variables "x" e "y".
+<br>
+En este caso hemos de presionar las cuatro teclas de direcci&oacute;n para hacer aparecer y desplazarse la imagen.
+<p>
+
+<canvas id="micanvas" width="500" height="500" style="border:1px solid #000000;background-color:#87CEEB;">
+</canvas>
+</p>
+<script type="text/javascript">
+
+var x=0;//coordenadas iniciales de la imagen
+var y=0;
+  
+function lienzo(){
+
+var c=document.getElementById("micanvas");
+var ctx=c.getContext("2d");
+var img1 = new Image();
+img1.src = 'colibri.jpg';
+ctx.clearRect(0,0,500,500);//limpia todo el canvas 
+ctx.drawImage(img1,x,y,50,50);//dibuja la imagen
+
+} //cuando presiona una tecla
+function teclado(event){
+
+if(event.keyCode=='39'){//si la tecla presionada es direccional derecho
+
+x=x+5;//mueve la imagen 5 pixeles a la derecha
+lienzo();
+
+}
+
+if(event.keyCode=='37'){//si la tecla presionada es direccional izquierdo
+
+x=x-5;//mueve la imagen 5 pixeles a la izquierda
+lienzo();
+
+}
+
+if(event.keyCode=='38'){//si la tecla presionada es direccional arriba
+
+y=y-5;//sube la imagen
+lienzo();
+
+}
+
+if(event.keyCode=='40'){// si la tecla presionada es direccional abajo
+
+y=y+5;//baja la imagen
+lienzo();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
